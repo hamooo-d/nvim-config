@@ -1,0 +1,6 @@
+require('plugins')
+require('general')
+require('lsp')
+require('mappings')
+require('tree-sitter')
+require('nerdtree')
