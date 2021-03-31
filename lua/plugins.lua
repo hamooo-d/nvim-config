@@ -35,11 +35,13 @@ packer.startup(function()
     -- Explorer
     use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
+    use "ryanoasis/vim-devicons"
 
     -- LSP
     use 'neovim/nvim-lspconfig'
     use 'nvim-lua/completion-nvim'
     use 'anott03/nvim-lspinstall'
+    use "windwp/nvim-autopairs"
 
     -- Completion
     use 'hrsh7th/nvim-compe'
