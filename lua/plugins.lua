@@ -40,14 +40,19 @@ packer.startup(function()
     use 'neovim/nvim-lspconfig'
     use 'nvim-lua/completion-nvim'
     use 'anott03/nvim-lspinstall'
+
+    -- Completion
     use 'hrsh7th/nvim-compe'
+    use 'hrsh7th/vim-vsnip'
+    use 'norcalli/snippets.nvim'
 
     -- Telescope
     use 'nvim-lua/popup.nvim'
     use 'nvim-lua/plenary.nvim'
-    use 'nvim-lua/telescope.nvim'
-    use 'jremmen/vim-ripgrep'
+    use 'nvim-telescope/telescope.nvim'
 
+    -- Utilies
+    use 'jremmen/vim-ripgrep'
     use 'janko/vim-test'
     use 'preservim/nerdtree'
     use 'mbbill/undotree'
@@ -62,7 +67,9 @@ packer.startup(function()
     -- Colorscheme
     use 'tjdevries/colorbuddy.nvim'
     use 'joshdick/onedark.vim'
-
+    use 'sonph/onehalf'
+    use 'morhetz/gruvbox'
+    use 'bkegley/gloombuddy'
     -- sneaking some formatting in here too
     use {'prettier/vim-prettier', run = 'yarn install'}
 

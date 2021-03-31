@@ -30,12 +30,13 @@ o.laststatus = 2
 
 vim.o.clipboard = "unnamedplus" -- Copy paste between vim and everything else
 
+vim.g.airline_theme='base16'
+vim.g.github_enterprise_urls = { 'https://github.prod.hulu.com' }
 vim.g.airline_powerline_fonts = 1
 vim.g['airline#extensions#tabline#enabled'] = 1
 vim.g['airline#extensions#tabline#buffer_min_count'] = 2
 vim.g['airline#extensions#tabline#formatter'] = 'unique_tail'
-vim.g['airline_theme'] = 'onedark'
-vim.g.airline_section_y = ''
+vim.g.airline_section_y=''
 vim.g.airline_skip_empty_sections = 1
 vim.g.mapleader = ' '
 
@@ -43,9 +44,9 @@ vim.g['test#strategy'] = 'neovim'
 vim.g['test#neovim#term_position'] = 'vertical'
 vim.g['test#javascript#jest#options'] = '--watch'
 
-vim.cmd [[colorscheme onedark]]
-vim.cmd [[highlight normal guibg=none]]
-vim.cmd [[highlight CursorColumn guibg=#404040]]
-vim.cmd [[hi CursorLineNr   term=bold ctermfg=Yellow gui=bold guifg=Yellow]]
-vim.cmd [[hi LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE]]
-vim.cmd [[hi Normal guibg=NONE ctermbg=NONE]]
+vim.cmd [[colorscheme gloombuddy]]
+vim.cmd [[set shortmess+=c]]
+vim.cmd[[highlight normal guibg=none]]
+vim.cmd[[highlight CursorColumn guibg=#404040]]
+vim.cmd[[hi CursorLineNr   term=bold ctermfg=Yellow gui=bold guifg=Yellow]]
+vim.cmd[[hi LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE]]

@@ -1,6 +1,7 @@
 require('plugins')
 require('general')
-require('lsp')
 require('mappings')
 require('tree-sitter')
 require('nerdtree')
+require('lsp')
+require('m-compe')
