@@ -79,6 +79,7 @@ function _G.completions()
     return npairs.check_break_line_char()
 end
 
+vim.cmd [[highlight link CompeDocumentation NormalFloat]]
 vim.api.nvim_set_keymap("i", "<CR>", "v:lua.completions()", {expr = true})
 vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})

@@ -68,9 +68,9 @@ vim.api.nvim_set_keymap(
     [[<Cmd>lua require('telescope').extensions.media_files.media_files()<CR>]],
     opt
 )
-vim.api.nvim_set_keymap("n", "<Leader>fb", [[<Cmd>lua require('telescope.builtin').buffers()<CR>]], opt)
-vim.api.nvim_set_keymap("n", "<Leader>fh", [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]], opt)
-vim.api.nvim_set_keymap("n", "<Leader>fo", [[<Cmd>lua require('telescope.builtin').oldfiles()<CR>]], opt)
-vim.api.nvim_set_keymap("n", "<Leader>fm", [[<Cmd> Neoformat<CR>]], opt)
+vim.api.nvim_set_keymap("n", "<leader>fb", [[<Cmd>lua require('telescope.builtin').buffers()<CR>]], opt)
+vim.api.nvim_set_keymap("n", "<leader>fh", [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]], opt)
+vim.api.nvim_set_keymap("n", "<leader>fo", [[<Cmd>lua require('telescope.builtin').oldfiles()<CR>]], opt)
+vim.api.nvim_set_keymap("n", "<leader>fm", [[<Cmd> Neoformat<CR>]], opt)
 
 vim.api.nvim_set_keymap("n", "<C-a>", [[ <Cmd> %y+<CR>]], opt)

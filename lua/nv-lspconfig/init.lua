@@ -5,6 +5,7 @@ local function custom_on_attach(client)
     print('Attaching to ' .. client.name)
     completion.on_attach(client)
 end
+
 local function on_attach(client)
 
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -44,6 +45,7 @@ DATA_PATH = vim.fn.stdpath('data')
 
 -- setup language servers here
 lspconfig.tsserver.setup(default_config)
+lspconfig.cssls.setup(default_config)
 
 -- Lua lsp
 local system_name
