@@ -65,10 +65,10 @@ packer.startup(function()
     use 'tpope/vim-rhubarb'
     use 'jiangmiao/auto-pairs'
     use 'tpope/vim-surround'
-    use 'scrooloose/nerdcommenter'
+    -- use 'scrooloose/nerdcommenter'
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
-    use 'mhinz/vim-startify'
+    -- use 'mhinz/vim-startify'
     use 'terrortylor/nvim-comment'
 
     -- Colorscheme

@@ -23,13 +23,12 @@ o.expandtab = true
 wo.relativenumber = true
 wo.signcolumn = 'yes'
 wo.wrap = false
-wo.cursorcolumn = true
+wo.cursorcolumn = false
 wo.number = true
 wo.numberwidth = 2
 o.laststatus = 2
 
 vim.o.clipboard = "unnamedplus" -- Copy paste between vim and everything else
-
 
 vim.g.airline_theme='base16'
 vim.g.airline_powerline_fonts = 1
