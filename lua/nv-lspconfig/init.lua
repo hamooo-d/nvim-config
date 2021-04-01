@@ -1,10 +1,4 @@
 local lspconfig = require 'lspconfig'
-local completion = require 'completion'
-
-local function custom_on_attach(client)
-    print('Attaching to ' .. client.name)
-    completion.on_attach(client)
-end
 
 local function on_attach(client)
 

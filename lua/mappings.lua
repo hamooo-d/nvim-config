@@ -37,7 +37,7 @@ key_mapper('n', '<C-e>', ':NvimTreeToggle<CR>')
 
 -- Better quiting and saving
 key_mapper('n', '<C-s>', ':w<CR>')
-key_mapper('n', '<C-q>', ':q<CR>')
+key_mapper('n', '<C-q>', ':bd<CR>')
 key_mapper('n', '<C-qq>', ':wq<CR>')
 
 -- better indenting

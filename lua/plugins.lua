@@ -43,6 +43,7 @@ packer.startup(function()
     use 'anott03/nvim-lspinstall'
     use "windwp/nvim-autopairs"
     use 'onsails/lspkind-nvim'
+    use 'lukas-reineke/indent-blankline.nvim'
 
     -- Completion
     use 'hrsh7th/nvim-compe'
@@ -55,21 +56,22 @@ packer.startup(function()
     use 'nvim-telescope/telescope.nvim'
     use "nvim-telescope/telescope-media-files.nvim"
 
+    -- Git
+    use 'tpope/vim-fugitive'
+    use "lewis6991/gitsigns.nvim"
+
     -- Utilies
     use 'jremmen/vim-ripgrep'
     use 'janko/vim-test'
     use 'preservim/nerdtree'
     use 'mbbill/undotree'
-    use 'tpope/vim-fugitive'
-    use "lewis6991/gitsigns.nvim"
     use 'tpope/vim-rhubarb'
     use 'jiangmiao/auto-pairs'
     use 'tpope/vim-surround'
-    -- use 'scrooloose/nerdcommenter'
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
-    -- use 'mhinz/vim-startify'
     use 'terrortylor/nvim-comment'
+    use 'norcalli/nvim-colorizer.lua'
 
     -- Colorscheme
     use 'tjdevries/colorbuddy.nvim'
@@ -77,6 +79,8 @@ packer.startup(function()
     use 'sonph/onehalf'
     use 'morhetz/gruvbox'
     use 'bkegley/gloombuddy'
+    use 'chriskempson/base16-vim'
+
     -- sneaking some formatting in here too
     use {'prettier/vim-prettier', run = 'yarn install'}
 
