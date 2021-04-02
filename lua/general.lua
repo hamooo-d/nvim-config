@@ -37,37 +37,37 @@ g.airline_powerline_fonts = 1
 g['airline#extensions#tabline#enabled'] = 1
 g['airline#extensions#tabline#buffer_min_count'] = 2
 g['airline#extensions#tabline#formatter'] = 'unique_tail'
--- g['prettier#autoformat'] = 1
--- g['prettier#autoformat_config_present'] = 1
 g.airline_section_y=''
 g.airline_skip_empty_sections = 1
 g.mapleader = ' '
 g.indentLine_enabled = 0
-g.indent_blankline_char = "▏"
-
-cmd("hi IndentBlanklineChar guifg=#373b43")
-g.indent_blankline_filetype_exclude = {"help", "terminal"}
-g.indent_blankline_show_trailing_blankline_indent = false
-g.indent_blankline_show_first_indent_level = false
+-- g.indent_blankline_char = "▏"
+-- cmd("hi IndentBlanklineChar guifg=#373b43")
+-- g.indent_blankline_filetype_exclude = {"help", "terminal"}
+-- g.indent_blankline_show_trailing_blankline_indent = false
+-- g.indent_blankline_show_first_indent_level = false
 
 g['test#strategy'] = 'neovim'
 g['test#neovim#term_position'] = 'vertical'
 g['test#javascript#jest#options'] = '--watch'
 
+-- Floatterm
+g.floaterm_keymap_new    = '<F7>'
+g.floaterm_keymap_prev   = '<F8>'
+g.floaterm_keymap_next   = '<F9>'
+g.floaterm_keymap_toggle = '<F12>'
 cmd [[set shortmess+=c]]
 
 
 -- highlights
-cmd "colorscheme base16-onedark"
+cmd [[let base16colorspace=256]]
+cmd "colorscheme base16-material"
 cmd "syntax enable"
 cmd "syntax on"
 
 cmd("hi LineNr guibg=NONE")
 cmd("hi SignColumn guibg=NONE")
 cmd("hi VertSplit guibg=NONE")
-cmd("hi DiffAdd guifg=#81A1C1 guibg = none")
-cmd("hi DiffChange guifg =#3A3E44 guibg = none")
-cmd("hi DiffModified guifg = #81A1C1 guibg = none")
 cmd("hi EndOfBuffer guifg=#282c34")
 
 cmd("hi TelescopeBorder   guifg=#3e4451")
@@ -75,11 +75,14 @@ cmd("hi TelescopePromptBorder   guifg=#3e4451")
 cmd("hi TelescopeResultsBorder  guifg=#3e4451")
 cmd("hi TelescopePreviewBorder  guifg=#525865")
 cmd("hi PmenuSel  guibg=#98c379")
+cmd("hi GitSignsAdd guibg=none guifg=#0ec933")
+cmd("hi GitSignsChange guibg=none guifg=#dce629")
+cmd("hi GitSignsDelete guibg=none guifg=#e6293f")
 
 -- tree folder name , icon color
 cmd("hi NvimTreeFolderIcon guifg = #61afef")
 cmd("hi NvimTreeFolderName guifg = #61afef")
-cmd("hi NvimTreeIndentMarker guifg=#545862")
+cmd("hi NvimTreeIndentMarker guifg= none")
 
 cmd("hi Normal guibg=NONE ctermbg=NONE")
 

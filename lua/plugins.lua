@@ -31,6 +31,8 @@ packer.startup(function()
     use 'nvim-treesitter/nvim-treesitter'
     use 'sheerun/vim-polyglot'
     use 'mattn/emmet-vim'
+    use 'p00f/nvim-ts-rainbow'
+    use 'windwp/nvim-ts-autotag'
 
     -- Explorer
     use 'kyazdani42/nvim-web-devicons'
@@ -39,11 +41,8 @@ packer.startup(function()
 
     -- LSP
     use 'neovim/nvim-lspconfig'
-    use 'nvim-lua/completion-nvim'
     use 'anott03/nvim-lspinstall'
-    use "windwp/nvim-autopairs"
     use 'onsails/lspkind-nvim'
-    use 'lukas-reineke/indent-blankline.nvim'
 
     -- Completion
     use 'hrsh7th/nvim-compe'
@@ -58,30 +57,27 @@ packer.startup(function()
 
     -- Git
     use 'tpope/vim-fugitive'
+    use 'tpope/vim-rhubarb'
     use "lewis6991/gitsigns.nvim"
 
     -- Utilies
     use 'jremmen/vim-ripgrep'
     use 'janko/vim-test'
-    use 'preservim/nerdtree'
     use 'mbbill/undotree'
-    use 'tpope/vim-rhubarb'
     use 'jiangmiao/auto-pairs'
     use 'tpope/vim-surround'
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
     use 'terrortylor/nvim-comment'
+    use 'voldikss/vim-floaterm'
+    use 'lukas-reineke/indent-blankline.nvim'
+    use "windwp/nvim-autopairs"
+
+    -- Colors
+    use 'chriskempson/base16-vim'
     use 'norcalli/nvim-colorizer.lua'
 
-    -- Colorscheme
-    use 'tjdevries/colorbuddy.nvim'
-    use 'joshdick/onedark.vim'
-    use 'sonph/onehalf'
-    use 'morhetz/gruvbox'
-    use 'bkegley/gloombuddy'
-    use 'chriskempson/base16-vim'
-
-    -- sneaking some formatting in here too
+    -- Formatings
     use {'prettier/vim-prettier', run = 'yarn install'}
 
 end)
