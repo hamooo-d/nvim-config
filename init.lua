@@ -10,4 +10,3 @@ require('nv-icons')
 require('nv-commenter')
 require('nv-git')
 require('nv-colorizer')
-

@@ -80,5 +80,6 @@ packer.startup(function()
 
     -- Formatings
     use {'prettier/vim-prettier', run = 'yarn install'}
+    use 'andrejlevkovitch/vim-lua-format'
 
 end)

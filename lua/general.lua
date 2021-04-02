@@ -32,12 +32,12 @@ o.laststatus = 2
 
 vim.o.clipboard = "unnamedplus" -- Copy paste between vim and everything else
 
-g.airline_theme='base16'
+g.airline_theme = 'base16'
 g.airline_powerline_fonts = 1
 g['airline#extensions#tabline#enabled'] = 1
 g['airline#extensions#tabline#buffer_min_count'] = 2
 g['airline#extensions#tabline#formatter'] = 'unique_tail'
-g.airline_section_y=''
+g.airline_section_y = ''
 g.airline_skip_empty_sections = 1
 g.mapleader = ' '
 g.indentLine_enabled = 0
@@ -52,12 +52,11 @@ g['test#neovim#term_position'] = 'vertical'
 g['test#javascript#jest#options'] = '--watch'
 
 -- Floatterm
-g.floaterm_keymap_new    = '<F7>'
-g.floaterm_keymap_prev   = '<F8>'
-g.floaterm_keymap_next   = '<F9>'
-g.floaterm_keymap_toggle = '<F12>'
+g.floaterm_keymap_new = '<F7>'
+g.floaterm_keymap_prev = '<F8>'
+g.floaterm_keymap_next = '<F9>'
+g.floaterm_keymap_toggle = '<C-t>'
 cmd [[set shortmess+=c]]
-
 
 -- highlights
 cmd [[let base16colorspace=256]]
@@ -91,12 +90,18 @@ require("nvim-autopairs").setup()
 -- nvimTree bg color
 cmd("hi CustomExplorerBg guibg=#242830")
 
-vim.api.nvim_exec(
-    [[
+-- Auto Prettier formatting
+-- TODO: fix autoformatting
+cmd [[autocmd BufWritePre *.tsx  :PrettierAsync]]
+cmd [[autocmd BufWritePre *.ts   :PrettierAsync]]
+cmd [[autocmd BufWritePre *.jsx  :PrettierAsync]]
+cmd [[autocmd BufWritePre *.css  :PrettierAsync]]
+cmd [[autocmd BufWritePre *.scss :PrettierAsync]]
+cmd [[ autocmd BufWrite *.lua call LuaFormat()]]
+
+vim.api.nvim_exec([[
 augroup NvimTree 
   au!
   au FileType NvimTree setlocal winhighlight=Normal:CustomExplorerBg
  augroup END
- ]],
-    false
-)
+ ]], false)
