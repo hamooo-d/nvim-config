@@ -43,6 +43,7 @@ packer.startup(function()
     use 'neovim/nvim-lspconfig'
     use 'anott03/nvim-lspinstall'
     use 'onsails/lspkind-nvim'
+    use 'glepnir/lspsaga.nvim'
 
     -- Completion
     use 'hrsh7th/nvim-compe'
