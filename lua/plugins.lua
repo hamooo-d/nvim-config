@@ -71,12 +71,13 @@ packer.startup(function()
     use 'vim-airline/vim-airline-themes'
     use 'terrortylor/nvim-comment'
     use 'voldikss/vim-floaterm'
-    use 'lukas-reineke/indent-blankline.nvim'
+    use {'lukas-reineke/indent-blankline.nvim', branch = 'lua'}
     use "windwp/nvim-autopairs"
 
     -- Colors
     use 'chriskempson/base16-vim'
     use 'norcalli/nvim-colorizer.lua'
+    use 'joshdick/onedark.vim'
 
     -- Formatings
     use {'prettier/vim-prettier', run = 'yarn install'}

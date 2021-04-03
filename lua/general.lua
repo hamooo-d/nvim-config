@@ -40,12 +40,20 @@ g['airline#extensions#tabline#formatter'] = 'unique_tail'
 g.airline_section_y = ''
 g.airline_skip_empty_sections = 1
 g.mapleader = ' '
-g.indentLine_enabled = 0
--- g.indent_blankline_char = "▏"
--- cmd("hi IndentBlanklineChar guifg=#373b43")
--- g.indent_blankline_filetype_exclude = {"help", "terminal"}
--- g.indent_blankline_show_trailing_blankline_indent = false
--- g.indent_blankline_show_first_indent_level = false
+vim.g.indent_blankline_buftype_exclude = {'terminal'}
+vim.g.indent_blankline_filetype_exclude =
+    {'help', 'startify', 'dashboard', 'packer', 'neogitstatus'}
+vim.g.indent_blankline_char = '▏'
+-- vim.g.indent_blankline_use_treesitter = true
+vim.g.indent_blankline_show_trailing_blankline_indent = false
+vim.g.indent_blankline_show_current_context = true
+vim.g.indent_blankline_context_patterns =
+    {
+        'class', 'return', 'function', 'method', '^if', '^while', 'jsx_element',
+        '^for', '^object', '^table', 'block', 'arguments', 'if_statement',
+        'else_clause', 'jsx_element', 'jsx_self_closing_element',
+        'try_statement', 'catch_clause', 'import_statement', 'operation_type'
+    }
 
 g['test#strategy'] = 'neovim'
 g['test#neovim#term_position'] = 'vertical'
@@ -60,7 +68,7 @@ cmd [[set shortmess+=c]]
 
 -- highlights
 cmd [[let base16colorspace=256]]
-cmd "colorscheme base16-material"
+cmd "colorscheme onedark"
 cmd "syntax enable"
 cmd "syntax on"
 
@@ -86,9 +94,6 @@ cmd("hi NvimTreeIndentMarker guifg= none")
 cmd("hi Normal guibg=NONE ctermbg=NONE")
 
 require("nvim-autopairs").setup()
-
--- nvimTree bg color
-cmd("hi CustomExplorerBg guibg=#242830")
 
 -- Auto Prettier formatting
 -- TODO: fix autoformatting
