@@ -32,7 +32,7 @@ o.laststatus = 2
 
 vim.o.clipboard = "unnamedplus" -- Copy paste between vim and everything else
 
-g.airline_theme = 'base16'
+g.airline_theme = 'onedark'
 g.airline_powerline_fonts = 1
 g['airline#extensions#tabline#enabled'] = 1
 g['airline#extensions#tabline#buffer_min_count'] = 2
@@ -40,20 +40,22 @@ g['airline#extensions#tabline#formatter'] = 'unique_tail'
 g.airline_section_y = ''
 g.airline_skip_empty_sections = 1
 g.mapleader = ' '
-vim.g.indent_blankline_buftype_exclude = {'terminal'}
-vim.g.indent_blankline_filetype_exclude =
-    {'help', 'startify', 'dashboard', 'packer', 'neogitstatus'}
-vim.g.indent_blankline_char = '▏'
--- vim.g.indent_blankline_use_treesitter = true
-vim.g.indent_blankline_show_trailing_blankline_indent = false
-vim.g.indent_blankline_show_current_context = true
-vim.g.indent_blankline_context_patterns =
-    {
-        'class', 'return', 'function', 'method', '^if', '^while', 'jsx_element',
-        '^for', '^object', '^table', 'block', 'arguments', 'if_statement',
-        'else_clause', 'jsx_element', 'jsx_self_closing_element',
-        'try_statement', 'catch_clause', 'import_statement', 'operation_type'
-    }
+g.indent_blankline_buftype_exclude = {'terminal'}
+g.indent_blankline_filetype_exclude = {
+    'help', 'startify', 'dashboard', 'packer', 'neogitstatus'
+}
+g.indent_blankline_char = '▏'
+g.indent_blankline_use_treesitter = true
+g.indent_blankline_show_first_indent_level = false
+g.indent_blankline_show_trailing_blankline_indent = false
+g.indent_blankline_show_current_context = false
+g.indent_blankline_context_patterns = {
+    'class', 'return', 'function', 'method', '^if', '^while', 'jsx_element',
+    '^for', '^object', '^table', 'block', 'arguments', 'if_statement',
+    'else_clause', 'jsx_element', 'jsx_self_closing_element', 'try_statement',
+    'catch_clause', 'import_statement', 'operation_type'
+}
+cmd("hi IndentBlanklineChar guifg=#373b43")
 
 g['test#strategy'] = 'neovim'
 g['test#neovim#term_position'] = 'vertical'
@@ -67,7 +69,6 @@ g.floaterm_keymap_toggle = '<C-t>'
 cmd [[set shortmess+=c]]
 
 -- highlights
-cmd [[let base16colorspace=256]]
 cmd "colorscheme onedark"
 cmd "syntax enable"
 cmd "syntax on"
@@ -82,8 +83,8 @@ cmd("hi TelescopePromptBorder   guifg=#3e4451")
 cmd("hi TelescopeResultsBorder  guifg=#3e4451")
 cmd("hi TelescopePreviewBorder  guifg=#525865")
 cmd("hi PmenuSel  guibg=#98c379")
-cmd("hi GitSignsAdd guibg=none guifg=#0ec933")
-cmd("hi GitSignsChange guibg=none guifg=#dce629")
+cmd("hi GitSignsAdd guibg=none guifg=#97C378")
+cmd("hi GitSignsChange guibg=none guifg=#FDE49C")
 cmd("hi GitSignsDelete guibg=none guifg=#e6293f")
 
 -- tree folder name , icon color

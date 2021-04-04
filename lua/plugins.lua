@@ -25,7 +25,7 @@ packer.startup(function()
     local use = use
 
     -- Packer
-    use 'wbthomason/packer.nvim'
+    use {"wbthomason/packer.nvim", opt = true}
 
     -- Hightlights
     use 'nvim-treesitter/nvim-treesitter'
