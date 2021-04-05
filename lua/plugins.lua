@@ -30,9 +30,9 @@ packer.startup(function()
     -- Hightlights
     use 'nvim-treesitter/nvim-treesitter'
     use 'sheerun/vim-polyglot'
-    use 'mattn/emmet-vim'
     use 'p00f/nvim-ts-rainbow'
     use 'windwp/nvim-ts-autotag'
+    use 'luochen1990/rainbow'
 
     -- Explorer
     use 'kyazdani42/nvim-web-devicons'
@@ -44,6 +44,7 @@ packer.startup(function()
     use 'anott03/nvim-lspinstall'
     use 'onsails/lspkind-nvim'
     use 'glepnir/lspsaga.nvim'
+    use 'mattn/emmet-vim'
 
     -- Completion
     use 'hrsh7th/nvim-compe'

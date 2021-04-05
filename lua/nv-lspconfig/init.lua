@@ -54,7 +54,21 @@ local default_config = {on_attach = custom_on_attach}
 DATA_PATH = vim.fn.stdpath('data')
 
 -- setup language servers here
-lspconfig.tsserver.setup(default_config)
+local function organize_imports()
+    local params = {
+        command = "_typescript.organizeImports",
+        arguments = {vim.api.nvim_buf_get_name(0)},
+        title = ""
+    }
+    vim.lsp.buf.execute_command(params)
+end
+
+lspconfig.tsserver.setup({
+    on_attach = custom_on_attach,
+    commands = {
+        OrganizeImports = {organize_imports, description = "Organize Imports"}
+    }
+})
 lspconfig.cssls.setup(default_config)
 lspconfig.pyright.setup(default_config)
 lspconfig.graphql.setup(default_config)
