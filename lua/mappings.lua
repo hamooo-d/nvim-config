@@ -2,6 +2,7 @@ local key_mapper = function(mode, key, result)
     vim.api.nvim_set_keymap(mode, key, result, {noremap = true, silent = true})
 end
 
+
 -- No arrows
 key_mapper('', '<up>', '<nop>')
 key_mapper('', '<down>', '<nop>')
@@ -46,14 +47,25 @@ key_mapper('v', '<', '<gv')
 key_mapper('v', '>', '>gv')
 
 -- Buffer movments
-vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {silent = true})
-vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {silent = true})
-vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {silent = true})
-vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {silent = true})
+key_mapper('n', '<C-h>', '<C-w>h')
+key_mapper('n', '<C-j>', '<C-w>j')
+key_mapper('n', '<C-k>', '<C-w>k')
+key_mapper('n', '<C-l>', '<C-w>l')
 
 -- compe
-vim.cmd[[inoremap <silent><expr> <C-Space> compe#complete()]]
---vim.cmd[[inoremap <silent><expr> <CR>      compe#confirm('<CR>')]]
-vim.cmd[[inoremap <silent><expr> <C-e>     compe#close('<C-e>')]]
-vim.cmd[[inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4  })]]
-vim.cmd[[inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4  })]]
+key_mapper('i', '<C-Space>', 'compe#complete()')
+key_mapper('i', '<CR>',      "compe#confirm('<CR>')")
+key_mapper('i', '<C-e>',     "comep#close('<C-e>')")
+key_mapper('i', '<C-f>',     "compe#scroll({ 'delta': +4  })")
+key_mapper('i', '<C-d>',     "compe#scroll({ 'delta': -4  })")
+
+-- Telescope
+key_mapper("n", "<Leader>ff",':Telescope find_files<CR>')
+key_mapper("n", "<Leader>fb",':Telescope buffers<CR>')
+key_mapper("n", "<Leader>fo",':Telescope oldfiles<CR>')
+key_mapper("n", "<Leader>fh",':Telescope help_tags<CR>')
+key_mapper("n", "<Leader>fg",':Telescope<CR>git')
+-- key_mapper("n", "<Leader>fp",[[<Cmd>lua require('telescope').extensions.media_files.media_files()<CR>]])
+-- key_mapper("n", "<leader>fb",[[<Cmd>lua require('telescope.builtin').buffers()<CR>]])
+-- key_mapper("n", "<leader>fh",[[<Cmd>lua require('telescope.builtin').help_tags()<CR>]])
+-- key_mapper("n", "<leader>fo",[[<Cmd>lua require('telescope.builtin').oldfiles()<CR>]])

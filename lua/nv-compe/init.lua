@@ -27,7 +27,7 @@ require'compe'.setup {
         snippets_nvim = {kind = "  "},
         ultisnips = {kind = "  "},
         -- treesitter = {kind = "  "},
-        emoji = {kind = " ﲃ ", filetypes = {"markdown"}}
+        emoji = {kind = " ﲃ ", filetypes = {"markdown", "gitcommit"}}
         -- for emoji press : (idk if that in compe tho)
     }
 }
