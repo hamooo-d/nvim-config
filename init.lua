@@ -1,5 +1,5 @@
-require('general')
 require('plugins')
+require('general')
 require('mappings')
 require('nv-treesitter')
 require('nv-tree')
