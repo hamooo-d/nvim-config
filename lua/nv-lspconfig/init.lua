@@ -1,4 +1,5 @@
 local lspconfig = require 'lspconfig'
+-- require'lspinstall'.setup()
 
 local function custom_on_attach(client)
     local function buf_set_keymap(...)
@@ -53,6 +54,8 @@ end
 local default_config = {on_attach = custom_on_attach}
 DATA_PATH = vim.fn.stdpath('data')
 
+-- local servers = require'lspinstall'.installed_servers()
+
 -- setup language servers here
 local function organize_imports()
     local params = {
@@ -72,6 +75,7 @@ lspconfig.tsserver.setup({
 lspconfig.cssls.setup(default_config)
 lspconfig.pyright.setup(default_config)
 lspconfig.graphql.setup(default_config)
+lspconfig.jsonls.setup(default_config)
 
 -- Lua lsp
 local system_name
@@ -91,8 +95,12 @@ local sumneko_root_path = vim.fn.stdpath('cache') ..
 local sumneko_binary = sumneko_root_path .. "/bin/" .. system_name ..
                            "/lua-language-server"
 
+local sumneko_root_path = DATA_PATH .. "/lspinstall/lua"
+local sumneko_binary = sumneko_root_path .. "/sumneko-lua-language-server"
+
 require'lspconfig'.sumneko_lua.setup {
     cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
+    on_attach = custom_on_attach,
     settings = {
         Lua = {
             runtime = {
@@ -107,13 +115,9 @@ require'lspconfig'.sumneko_lua.setup {
             },
             workspace = {
                 -- Make the server aware of Neovim runtime files
-                library = {
-                    [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-                    [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true
-                }
-            },
-            -- Do not send telemetry data containing a randomized but unique identifier
-            telemetry = {enable = false}
+                library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true},
+                maxPreload = 10000
+            }
         }
     }
 }

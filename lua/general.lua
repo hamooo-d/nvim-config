@@ -77,7 +77,7 @@ cmd "syntax on"
 cmd("hi LineNr guibg=NONE")
 cmd("hi SignColumn guibg=NONE")
 cmd("hi VertSplit guibg=NONE")
-cmd("hi EndOfBuffer guifg=#282c34")
+cmd("hi EndOfBuffer guifg=#1E1E1E")
 
 cmd("hi TelescopeBorder   guifg=#3e4451")
 cmd("hi TelescopePromptBorder   guifg=#3e4451")

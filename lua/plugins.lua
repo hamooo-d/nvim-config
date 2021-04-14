@@ -41,8 +41,8 @@ packer.startup(function()
 
     -- LSP
     use 'neovim/nvim-lspconfig'
-    use 'anott03/nvim-lspinstall'
     use 'onsails/lspkind-nvim'
+    use 'kabouzeid/nvim-lspinstall'
     use 'glepnir/lspsaga.nvim'
     use 'mattn/emmet-vim'
 
