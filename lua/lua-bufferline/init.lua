@@ -11,7 +11,11 @@ require "bufferline".setup {
         enforce_regular_tabs = true,
         view = "multiwindow",
         show_buffer_close_icons = true,
-        separator_style = "thin"
+        separator_style = "thin",
+        diagnostics =  "nvim_lsp",
+        diagnostics_indicator = function(count, level, diagnostics_dict)
+              return " ("..count..")"
+            end
     },
     highlights = {
         background = {
@@ -19,7 +23,7 @@ require "bufferline".setup {
             guibg = "#161925"
         },
         fill = {
-            guifg = comment_fg,
+            guifg = "#161925",
             guibg = "#161925"
         },
         buffer_selected = {
@@ -44,8 +48,8 @@ require "bufferline".setup {
             guibg = "#161925"
         },
         indicator_selected = {
-            guifg = "#161925",
-            guibg = "#161925"
+            guifg = "#303650",
+            guibg = "#303650"
         },
         modified_selected = {
             guifg = string_fg,

@@ -13,8 +13,8 @@ key_mapper('', '<left>', '<nop>')
 key_mapper('', '<right>', '<nop>')
 
 -- Better buffer movements
-key_mapper('n', '<Tab>', ':bnext<CR>')
-key_mapper('n', '<S-Tab>', ':bprevious<CR>')
+key_mapper('n', '<Tab>', ':BufferLineCycleNext<CR>')
+key_mapper('n', '<S-Tab>', ':BufferLineCyclePrev<CR>')
 
 -- NoEscape
 key_mapper('i', 'JK', '<ESC>')
