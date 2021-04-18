@@ -69,6 +69,8 @@ packer.startup(function()
     use 'jiangmiao/auto-pairs'
     use 'tpope/vim-surround'
     use 'vim-airline/vim-airline'
+    use 'akinsho/nvim-bufferline.lua'
+    -- use 'romgrk/barbar.nvim'
     use 'vim-airline/vim-airline-themes'
     use 'terrortylor/nvim-comment'
     use 'voldikss/vim-floaterm'

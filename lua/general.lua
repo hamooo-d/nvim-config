@@ -4,41 +4,36 @@ local wo = vim.wo
 local cmd = vim.cmd
 local g = vim.g
 
+cmd 'set mouse=a'
+
 o.termguicolors = true
 o.syntax = 'on'
 o.errorbells = false
 o.smartcase = true
 o.showmode = false
-bo.swapfile = false
+o.clipboard = "unnamedplus" -- Copy paste between vim and everything else
 o.backup = false
 o.undodir = vim.fn.stdpath('config') .. '/undodir'
 o.undofile = true
 o.incsearch = true
 o.hidden = true
 o.completeopt = 'menuone,noinsert,noselect'
-bo.autoindent = true
-bo.smartindent = true
 o.tabstop = 2
 o.softtabstop = 2
 o.shiftwidth = 2
 o.expandtab = true
+o.laststatus = 2
+bo.swapfile = false
+bo.autoindent = true
+bo.smartindent = true
 wo.relativenumber = true
 wo.signcolumn = 'yes'
 wo.wrap = false
 wo.cursorcolumn = false
 wo.number = true
 wo.numberwidth = 2
-o.laststatus = 2
 
-vim.o.clipboard = "unnamedplus" -- Copy paste between vim and everything else
 
-g.airline_theme = 'onedark'
-g.airline_powerline_fonts = 1
-g['airline#extensions#tabline#enabled'] = 1
-g['airline#extensions#tabline#buffer_min_count'] = 2
-g['airline#extensions#tabline#formatter'] = 'unique_tail'
-g.airline_section_y = ''
-g.airline_skip_empty_sections = 1
 g.mapleader = ' '
 g.indent_blankline_buftype_exclude = {'terminal'}
 g.indent_blankline_filetype_exclude = {
@@ -56,7 +51,6 @@ g.indent_blankline_context_patterns = {
     'else_clause', 'jsx_element', 'jsx_self_closing_element', 'try_statement',
     'catch_clause', 'import_statement', 'operation_type'
 }
-cmd("hi IndentBlanklineChar guifg=#373b43")
 
 g['test#strategy'] = 'neovim'
 g['test#neovim#term_position'] = 'vertical'
@@ -77,8 +71,9 @@ cmd "syntax on"
 cmd("hi LineNr guibg=NONE")
 cmd("hi SignColumn guibg=NONE")
 cmd("hi VertSplit guibg=NONE")
-cmd("hi EndOfBuffer guifg=#1E1E1E")
+cmd("hi EndOfBuffer guifg=#161925")
 
+cmd("hi IndentBlanklineChar guifg=#373b43")
 cmd("hi TelescopeBorder   guifg=#3e4451")
 cmd("hi TelescopePromptBorder   guifg=#3e4451")
 cmd("hi TelescopeResultsBorder  guifg=#3e4451")
@@ -101,6 +96,7 @@ require("nvim-autopairs").setup()
 -- TODO: fix autoformatting
 cmd [[autocmd BufWritePre *.tsx  :PrettierAsync]]
 cmd [[autocmd BufWritePre *.ts   :PrettierAsync]]
+cmd [[autocmd BufWritePre *.json   :PrettierAsync]]
 cmd [[autocmd BufWritePre *.jsx  :PrettierAsync]]
 cmd [[autocmd BufWritePre *.css  :PrettierAsync]]
 cmd [[autocmd BufWritePre *.scss :PrettierAsync]]
