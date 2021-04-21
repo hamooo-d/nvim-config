@@ -33,7 +33,6 @@ wo.cursorcolumn = false
 wo.number = true
 wo.numberwidth = 2
 
-
 g.mapleader = ' '
 g.indent_blankline_buftype_exclude = {'terminal'}
 g.indent_blankline_filetype_exclude = {
