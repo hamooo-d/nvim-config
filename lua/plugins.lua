@@ -68,21 +68,15 @@ packer.startup(function()
     use 'mbbill/undotree'
     use 'jiangmiao/auto-pairs'
     use 'tpope/vim-surround'
-    use {
-        'windwp/nvim-autopairs',
-        commit = 'cae76770d1f69b927616313fe1676528adb6d62a'
-    }
-    -- use 'vim-airline/vim-airline'
+    use 'windwp/nvim-autopairs'
     use 'akinsho/nvim-bufferline.lua'
     use 'glepnir/galaxyline.nvim'
-    -- use 'romgrk/barbar.nvim'
-    -- use 'vim-airline/vim-airline-themes'
     use 'terrortylor/nvim-comment'
     use 'voldikss/vim-floaterm'
     use {'lukas-reineke/indent-blankline.nvim', branch = 'lua'}
-    -- use "windwp/nvim-autopairs"
+    use 'easymotion/vim-easymotion'
 
-    -- Colors
+   -- Colors
     use 'chriskempson/base16-vim'
     use 'norcalli/nvim-colorizer.lua'
     use 'joshdick/onedark.vim'
