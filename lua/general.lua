@@ -63,7 +63,10 @@ g.floaterm_keymap_toggle = '<C-t>'
 cmd [[set shortmess+=c]]
 
 -- highlights
-cmd "colorscheme onedark"
+-- cmd "colorscheme onedark"
+require('colorbuddy').colorscheme("material")
+g.material_style = "oceanic"
+g.material_flat_ui = 1
 cmd "syntax enable"
 cmd "syntax on"
 

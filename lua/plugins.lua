@@ -76,10 +76,12 @@ packer.startup(function()
     use {'lukas-reineke/indent-blankline.nvim', branch = 'lua'}
     use 'easymotion/vim-easymotion'
 
-   -- Colors
+    -- Colors
     use 'chriskempson/base16-vim'
     use 'norcalli/nvim-colorizer.lua'
     use 'joshdick/onedark.vim'
+    use 'tjdevries/colorbuddy.nvim'
+    use 'ahmedmohamed-hue/material.nvim'
 
     -- Formatings
     use {'prettier/vim-prettier', run = 'yarn install'}
