@@ -1,4 +1,4 @@
-require "bufferline".setup {
+require"bufferline".setup {
     options = {
         buffer_close_icon = "",
         modified_icon = "●",
@@ -11,49 +11,21 @@ require "bufferline".setup {
         enforce_regular_tabs = true,
         view = "multiwindow",
         show_buffer_close_icons = true,
-        separator_style = "thin",
-        diagnostics =  "nvim_lsp",
-        diagnostics_indicator = function(count, level, diagnostics_dict)
-              return " ("..count..")"
-            end
+        separator_style = "thin"
+        -- diagnostics =  "nvim_lsp",
+        -- diagnostics_indicator = function(count, level, diagnostics_dict)
+        --       return " ("..count..")"
+        --     end
     },
     highlights = {
-        background = {
-            guifg = comment_fg,
-            guibg = "#161925"
-        },
-        fill = {
-            guifg = "#161925",
-            guibg = "#161925"
-        },
-        buffer_selected = {
-            guifg = normal_fg,
-            guibg = "#303650",
-            gui = "bold"
-        },
-        buffer_visible = {
-            guifg = "#434b70",
-            guibg = "#161925"
-        },
-        separator_visible = {
-            guifg = "#161925",
-            guibg = "#161925"
-        },
-        separator_selected = {
-            guifg = "#161925",
-            guibg = "#161925"
-        },
-        separator = {
-            guifg = "#161925",
-            guibg = "#161925"
-        },
-        indicator_selected = {
-            guifg = "#303650",
-            guibg = "#303650"
-        },
-        modified_selected = {
-            guifg = string_fg,
-            guibg = "#353b45"
-        }
+        background = {guifg = comment_fg, guibg = "#161925"},
+        fill = {guifg = "#161925", guibg = "#161925"},
+        buffer_selected = {guifg = normal_fg, guibg = "#303650", gui = "bold"},
+        buffer_visible = {guifg = "#434b70", guibg = "#161925"},
+        separator_visible = {guifg = "#161925", guibg = "#161925"},
+        separator_selected = {guifg = "#161925", guibg = "#161925"},
+        separator = {guifg = "#161925", guibg = "#161925"},
+        indicator_selected = {guifg = "#303650", guibg = "#303650"},
+        modified_selected = {guifg = string_fg, guibg = "#353b45"}
     }
 }

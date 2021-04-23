@@ -4,8 +4,6 @@ local wo = vim.wo
 local cmd = vim.cmd
 local g = vim.g
 
-cmd 'set mouse=a'
-
 o.termguicolors = true
 o.syntax = 'on'
 o.errorbells = false
@@ -62,19 +60,19 @@ g.floaterm_keymap_next = '<F9>'
 g.floaterm_keymap_toggle = '<C-t>'
 cmd [[set shortmess+=c]]
 
--- highlights
--- cmd "colorscheme onedark"
-require('colorbuddy').colorscheme("material")
-g.material_style = "oceanic"
-g.material_flat_ui = 1
+-- ColorScheme
+-- require('colorbuddy').colorscheme("material")
+-- g.material_style = "oceanic"
+-- g.material_flat_ui = 0
+cmd "colorscheme onedark"
 cmd "syntax enable"
 cmd "syntax on"
 
+-- highlights
 cmd("hi LineNr guibg=NONE")
 cmd("hi SignColumn guibg=NONE")
 cmd("hi VertSplit guibg=NONE")
 cmd("hi EndOfBuffer guifg=#161925")
-
 cmd("hi IndentBlanklineChar guifg=#373b43")
 cmd("hi TelescopeBorder   guifg=#3e4451")
 cmd("hi TelescopePromptBorder   guifg=#3e4451")
@@ -85,12 +83,13 @@ cmd("hi GitSignsAdd guibg=none guifg=#97C378")
 cmd("hi GitSignsChange guibg=none guifg=#FDE49C")
 cmd("hi GitSignsDelete guibg=none guifg=#e6293f")
 
--- tree folder name , icon color
 cmd("hi NvimTreeFolderIcon guifg = #61afef")
 cmd("hi NvimTreeFolderName guifg = #61afef")
 cmd("hi NvimTreeIndentMarker guifg= none")
 
 cmd("hi Normal guibg=NONE ctermbg=NONE")
+
+cmd 'set mouse=a'
 
 require("nvim-autopairs").setup()
 

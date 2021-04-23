@@ -7,8 +7,8 @@ g.nvim_tree_indent_markers = 1 -- "0 by default, this option shows indent marker
 g.nvim_tree_auto_close = 1
 g.nvim_tree_follow = 1 -- "0 by default, this option allows the cursor to be updated when entering a buffer
 g.nvim_tree_auto_ignore_ft = 'startify' -- "empty by default, don't auto open tree on specific filetypes.
-g.nvim_tree_width = 28
-g.nvim_tree_ignore = { '.git', 'node_modules', '.cache' }
+g.nvim_tree_width = 25
+g.nvim_tree_ignore = {'.git', 'node_modules', '.cache'}
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 g.nvim_tree_bindings = {
     -- mappings
