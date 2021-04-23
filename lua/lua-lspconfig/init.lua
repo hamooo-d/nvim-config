@@ -1,7 +1,4 @@
-local lspconfig = require 'lspconfig'
--- require'lspinstall'.setup()
-
-local function custom_on_attach(client)
+local function on_attach(client)
     local function buf_set_keymap(...)
         vim.api.nvim_buf_set_keymap(bufnr, ...)
     end
@@ -51,12 +48,37 @@ local function custom_on_attach(client)
 
 end
 
-local default_config = {on_attach = custom_on_attach}
-DATA_PATH = vim.fn.stdpath('data')
+local function make_config()
+  local capabilities = vim.lsp.protocol.make_client_capabilities()
+  capabilities.textDocument.completion.completionItem.snippetSupport = true
+  return {
+    -- enable snippet support
+    capabilities = capabilities,
+    -- map buffer local keybindings when the language server attaches
+    on_attach = on_attach,
+  }
+end
 
--- local servers = require'lspinstall'.installed_servers()
+local lua_settings = {
+  Lua = {
+      runtime = {
+          -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+          version = 'LuaJIT',
+          -- Setup your lua path
+          path = vim.split(package.path, ';')
+      },
+      diagnostics = {
+          -- Get the language server to recognize the `vim` global
+          globals = {'vim'}
+      },
+      workspace = {
+          -- Make the server aware of Neovim runtime files
+          library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true},
+          maxPreload = 10000
+      }
+  }
+}
 
--- setup language servers here
 local function organize_imports()
     local params = {
         command = "_typescript.organizeImports",
@@ -66,62 +88,40 @@ local function organize_imports()
     vim.lsp.buf.execute_command(params)
 end
 
-lspconfig.tsserver.setup({
-    on_attach = custom_on_attach,
-    commands = {
-        OrganizeImports = {organize_imports, description = "Organize Imports"}
-    }
-})
-lspconfig.cssls.setup(default_config)
-lspconfig.pyright.setup(default_config)
-lspconfig.graphql.setup(default_config)
-lspconfig.jsonls.setup(default_config)
-lspconfig.rust_analyzer.setup(default_config)
+local tsserver_commands = {
+    OrganizeImports = {organize_imports, description = "Organize Imports"}
+}
 
--- Lua lsp
-local system_name
-if vim.fn.has("mac") == 1 then
-    system_name = "macOS"
-elseif vim.fn.has("unix") == 1 then
-    system_name = "Linux"
-elseif vim.fn.has('win32') == 1 then
-    system_name = "Windows"
-else
-    print("Unsupported system for sumneko")
+local function setup_servers()
+  require'lspinstall'.setup()
+
+  -- get all installed servers
+  local servers = require'lspinstall'.installed_servers()
+
+  for _, server in pairs(servers) do
+    local config = make_config()
+
+    -- language specific config
+    if server == "lua" then
+      config.settings = lua_settings
+    end
+    if server == "tsserver" then
+      config.commands = tsserver_commands
+  end
+
+    require'lspconfig'[server].setup(config)
+  end
 end
 
--- set the path to the sumneko installation; if you previously installed via the now deprecated :LspInstall, use
-local sumneko_root_path = vim.fn.stdpath('cache') ..
-                              '/lspconfig/sumneko_lua/lua-language-server'
-local sumneko_binary = sumneko_root_path .. "/bin/" .. system_name ..
-                           "/lua-language-server"
+setup_servers()
 
-local sumneko_root_path = DATA_PATH .. "/lspinstall/lua"
-local sumneko_binary = sumneko_root_path .. "/sumneko-lua-language-server"
-
-require'lspconfig'.sumneko_lua.setup {
-    cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
-    on_attach = custom_on_attach,
-    settings = {
-        Lua = {
-            runtime = {
-                -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-                version = 'LuaJIT',
-                -- Setup your lua path
-                path = vim.split(package.path, ';')
-            },
-            diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = {'vim'}
-            },
-            workspace = {
-                -- Make the server aware of Neovim runtime files
-                library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true},
-                maxPreload = 10000
-            }
-        }
-    }
-}
+vim.lsp.handlers["textDocument/publishDiagnostics"] =
+    vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+        underline = true,
+        virtual_text = true,
+        signs = true,
+        update_in_insert = true
+    })
 
 -- LSP Saga
 require'lspsaga'.init_lsp_saga {
@@ -140,10 +140,3 @@ require'lspsaga'.init_lsp_saga {
     }
 }
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] =
-    vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-        underline = true,
-        virtual_text = true,
-        signs = true,
-        update_in_insert = true
-    })
