@@ -40,6 +40,9 @@ key_mapper('n', '<leader>rn', ':Lspsaga rename<CR>')
 -- Explorer
 key_mapper('n', '<C-e>', ':NvimTreeToggle<CR>')
 
+-- Ranger
+key_mapper('n', '<Leader>fr', ':RnvimrToggle<CR>')
+
 -- Better quiting and saving
 key_mapper('n', '<C-s>', ':w<CR>')
 key_mapper('n', '<C-q>', ':bd<CR>')
@@ -65,12 +68,13 @@ vim.cmd [[inoremap <silent><expr> <C-Space> compe#complete()]]
 vim.cmd [[inoremap <silent><expr> <C-e> compe#complete('<C-e>')]]
 
 -- Telescope
-key_mapper("n", "<Leader>ff",':Telescope find_files<CR>')
-key_mapper("n", "<Leader>fb",':Telescope buffers<CR>')
-key_mapper("n", "<Leader>fo",':Telescope oldfiles<CR>')
-key_mapper("n", "<Leader>fh",':Telescope help_tags<CR>')
-key_mapper("n", "<Leader>fg",':Telescope<CR>git')
-key_mapper("n", "<Leader>fp",[[<Cmd>lua require('telescope').extensions.media_files.media_files()<CR>]])
+key_mapper("n", "<Leader>ff", ':Telescope find_files<CR>')
+key_mapper("n", "<Leader>fb", ':Telescope buffers<CR>')
+key_mapper("n", "<Leader>fo", ':Telescope oldfiles<CR>')
+key_mapper("n", "<Leader>fh", ':Telescope help_tags<CR>')
+key_mapper("n", "<Leader>fg", ':Telescope<CR>git')
+key_mapper("n", "<Leader>fp",
+           [[<Cmd>lua require('telescope').extensions.media_files.media_files()<CR>]])
 -- key_mapper("n", "<leader>fb",[[<Cmd>lua require('telescope.builtin').buffers()<CR>]])
 -- key_mapper("n", "<leader>fh",[[<Cmd>lua require('telescope.builtin').help_tags()<CR>]])
 -- key_mapper("n", "<leader>fo",[[<Cmd>lua require('telescope.builtin').oldfiles()<CR>]])

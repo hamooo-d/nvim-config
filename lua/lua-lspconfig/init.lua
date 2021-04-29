@@ -49,34 +49,37 @@ local function on_attach(client)
 end
 
 local function make_config()
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities.textDocument.completion.completionItem.snippetSupport = true
-  return {
-    -- enable snippet support
-    capabilities = capabilities,
-    -- map buffer local keybindings when the language server attaches
-    on_attach = on_attach,
-  }
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
+    return {
+        -- enable snippet support
+        capabilities = capabilities,
+        -- map buffer local keybindings when the language server attaches
+        on_attach = on_attach
+    }
 end
 
 local lua_settings = {
-  Lua = {
-      runtime = {
-          -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-          version = 'LuaJIT',
-          -- Setup your lua path
-          path = vim.split(package.path, ';')
-      },
-      diagnostics = {
-          -- Get the language server to recognize the `vim` global
-          globals = {'vim'}
-      },
-      workspace = {
-          -- Make the server aware of Neovim runtime files
-          library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true},
-          maxPreload = 10000
-      }
-  }
+    Lua = {
+        runtime = {
+            -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+            version = 'LuaJIT',
+            -- Setup your lua path
+            path = vim.split(package.path, ';')
+        },
+        diagnostics = {
+            -- Get the language server to recognize the `vim` global
+            globals = {'vim'}
+        },
+        workspace = {
+            -- Make the server aware of Neovim runtime files
+            library = {
+                [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+                [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true
+            },
+            maxPreload = 10000
+        }
+    }
 }
 
 local function organize_imports()
@@ -93,24 +96,22 @@ local tsserver_commands = {
 }
 
 local function setup_servers()
-  require'lspinstall'.setup()
+    require'lspinstall'.setup()
 
-  -- get all installed servers
-  local servers = require'lspinstall'.installed_servers()
+    -- get all installed servers
+    local servers = require'lspinstall'.installed_servers()
 
-  for _, server in pairs(servers) do
-    local config = make_config()
+    for _, server in pairs(servers) do
+        local config = make_config()
 
-    -- language specific config
-    if server == "lua" then
-      config.settings = lua_settings
+        -- language specific config
+        if server == "lua" then config.settings = lua_settings end
+        if server == "typescript" then
+            config.commands = tsserver_commands
+        end
+
+        require'lspconfig'[server].setup(config)
     end
-    if server == "tsserver" then
-      config.commands = tsserver_commands
-  end
-
-    require'lspconfig'[server].setup(config)
-  end
 end
 
 setup_servers()
@@ -139,4 +140,3 @@ require'lspsaga'.init_lsp_saga {
         virtual_text = true
     }
 }
-

@@ -101,8 +101,9 @@ cmd [[autocmd BufWritePre *.json   :PrettierAsync]]
 cmd [[autocmd BufWritePre *.jsx  :PrettierAsync]]
 cmd [[autocmd BufWritePre *.css  :PrettierAsync]]
 cmd [[autocmd BufWritePre *.scss :PrettierAsync]]
-cmd [[autocmd BufWritePre *.rs :RustFmt]]
+-- cmd [[autocmd BufWritePre *.rs :RustFmt]]
 cmd [[ autocmd BufWrite *.lua call LuaFormat()]]
+cmd [[ autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 1000)]]
 
 vim.api.nvim_exec([[
 augroup NvimTree 

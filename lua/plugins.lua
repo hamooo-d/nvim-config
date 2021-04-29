@@ -75,8 +75,11 @@ packer.startup(function()
     use 'voldikss/vim-floaterm'
     use {'lukas-reineke/indent-blankline.nvim', branch = 'lua'}
     use 'easymotion/vim-easymotion'
+    use 'airblade/vim-rooter'
+    use 'kevinhwang91/rnvimr'
 
     -- Colors
+    use 'pantharshit00/vim-prisma'
     use 'chriskempson/base16-vim'
     use 'norcalli/nvim-colorizer.lua'
     use 'joshdick/onedark.vim'
