@@ -13,8 +13,8 @@ key_mapper('', '<left>', '<nop>')
 key_mapper('', '<right>', '<nop>')
 
 -- Better buffer movements
-key_mapper('n', '<Tab>', ':BufferLineCycleNext<CR>')
-key_mapper('n', '<S-Tab>', ':BufferLineCyclePrev<CR>')
+-- key_mapper('n', '<Tab>', ':BufferLineCycleNext<CR>')
+-- key_mapper('n', '<S-Tab>', ':BufferLineCyclePrev<CR>')
 
 -- NoEscape
 key_mapper('i', 'JK', '<ESC>')
@@ -47,8 +47,8 @@ key_mapper('n', '<Leader>fr', ':RnvimrToggle<CR>')
 
 -- Better quiting and saving
 key_mapper('n', '<C-s>', ':w<CR>')
-key_mapper('n', '<C-q>', ':bd<CR>')
-key_mapper('n', '<C-qq>', ':wq<CR>')
+-- key_mapper('n', '<C-q>', ':bd<CR>')
+-- key_mapper('n', '<C-qq>', ':wq<CR>')
 
 -- better indenting
 key_mapper('v', '<', '<gv')

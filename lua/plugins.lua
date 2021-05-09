@@ -33,6 +33,7 @@ packer.startup(function()
     use 'p00f/nvim-ts-rainbow'
     use 'windwp/nvim-ts-autotag'
     use 'luochen1990/rainbow'
+    use 'ekalinin/Dockerfile.vim'
 
     -- Explorer
     use 'kyazdani42/nvim-web-devicons'
@@ -69,7 +70,7 @@ packer.startup(function()
     use 'jiangmiao/auto-pairs'
     use 'tpope/vim-surround'
     use 'windwp/nvim-autopairs'
-    use 'akinsho/nvim-bufferline.lua'
+    -- use 'akinsho/nvim-bufferline.lua'
     use 'glepnir/galaxyline.nvim'
     use 'terrortylor/nvim-comment'
     use 'voldikss/vim-floaterm'
@@ -77,14 +78,16 @@ packer.startup(function()
     use 'easymotion/vim-easymotion'
     use 'airblade/vim-rooter'
     use 'kevinhwang91/rnvimr'
+    use 'romgrk/barbar.nvim'
 
     -- Colors
-    use 'pantharshit00/vim-prisma'
-    use 'chriskempson/base16-vim'
+    use 'morhetz/gruvbox'
+    -- use 'pantharshit00/vim-prisma'
+    -- use 'chriskempson/base16-vim'
     use 'norcalli/nvim-colorizer.lua'
-    use 'joshdick/onedark.vim'
+    -- use 'joshdick/onedark.vim'
     use 'tjdevries/colorbuddy.nvim'
-    use 'ahmedmohamed-hue/material.nvim'
+    -- use 'ahmedmohamed-hue/material.nvim'
 
     -- Formatings
     use {'prettier/vim-prettier', run = 'yarn install'}

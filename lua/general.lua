@@ -28,8 +28,11 @@ wo.relativenumber = true
 wo.signcolumn = 'yes'
 wo.wrap = false
 wo.cursorcolumn = false
+wo.cursorline = true
 wo.number = true
 wo.numberwidth = 2
+
+cmd [[set background=dark]]
 
 g.mapleader = ' '
 g.indent_blankline_buftype_exclude = {'terminal'}
@@ -64,24 +67,25 @@ cmd [[set shortmess+=c]]
 -- require('colorbuddy').colorscheme("material")
 -- g.material_style = "oceanic"
 -- g.material_flat_ui = 0
-cmd "colorscheme onedark"
+cmd "colorscheme gruvbox"
 cmd "syntax enable"
 cmd "syntax on"
+g.gruvbox_contrast_dark = "hard"
 
 -- highlights
 cmd("hi LineNr guibg=NONE")
 cmd("hi SignColumn guibg=NONE")
 cmd("hi VertSplit guibg=NONE")
-cmd("hi EndOfBuffer guifg=#161925")
-cmd("hi IndentBlanklineChar guifg=#373b43")
-cmd("hi TelescopeBorder   guifg=#3e4451")
-cmd("hi TelescopePromptBorder   guifg=#3e4451")
-cmd("hi TelescopeResultsBorder  guifg=#3e4451")
-cmd("hi TelescopePreviewBorder  guifg=#525865")
-cmd("hi PmenuSel  guibg=#98c379")
-cmd("hi GitSignsAdd guibg=none guifg=#97C378")
-cmd("hi GitSignsChange guibg=none guifg=#FDE49C")
-cmd("hi GitSignsDelete guibg=none guifg=#e6293f")
+cmd("hi EndOfBuffer guifg=#1D2021")
+-- cmd("hi IndentBlanklineChar guifg=#373b43")
+-- cmd("hi TelescopeBorder   guifg=#3e4451")
+-- cmd("hi TelescopePromptBorder   guifg=#3e4451")
+-- cmd("hi TelescopeResultsBorder  guifg=#3e4451")
+-- cmd("hi TelescopePreviewBorder  guifg=#525865")
+-- cmd("hi PmenuSel  guibg=#98c379")
+-- cmd("hi GitSignsAdd guibg=none guifg=#97C378")
+-- cmd("hi GitSignsChange guibg=none guifg=#FDE49C")
+-- cmd("hi GitSignsDelete guibg=none guifg=#e6293f")
 
 cmd("hi NvimTreeFolderIcon guifg = #61afef")
 cmd("hi NvimTreeFolderName guifg = #61afef")
