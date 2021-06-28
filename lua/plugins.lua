@@ -34,10 +34,14 @@ packer.startup(function()
     use 'windwp/nvim-ts-autotag'
     use 'luochen1990/rainbow'
     use 'ekalinin/Dockerfile.vim'
+    use 'pantharshit00/vim-prisma'
 
     -- Explorer
     use 'kyazdani42/nvim-web-devicons'
-    use 'kyazdani42/nvim-tree.lua'
+    use {
+        'kyazdani42/nvim-tree.lua',
+        commit = '577df96b07d4545361e029ea85190b118f73f9fc'
+    }
     use "ryanoasis/vim-devicons"
 
     -- LSP
@@ -46,6 +50,17 @@ packer.startup(function()
     use 'kabouzeid/nvim-lspinstall'
     use 'glepnir/lspsaga.nvim'
     use 'mattn/emmet-vim'
+    use {
+        "folke/trouble.nvim",
+        requires = "kyazdani42/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    }
 
     -- Completion
     use 'hrsh7th/nvim-compe'
@@ -61,7 +76,7 @@ packer.startup(function()
     -- Git
     use 'tpope/vim-fugitive'
     use 'tpope/vim-rhubarb'
-    use "lewis6991/gitsigns.nvim"
+    use 'lewis6991/gitsigns.nvim'
 
     -- Utilies
     use 'jremmen/vim-ripgrep'
@@ -70,7 +85,6 @@ packer.startup(function()
     use 'jiangmiao/auto-pairs'
     use 'tpope/vim-surround'
     use 'windwp/nvim-autopairs'
-    -- use 'akinsho/nvim-bufferline.lua'
     use 'glepnir/galaxyline.nvim'
     use 'terrortylor/nvim-comment'
     use 'voldikss/vim-floaterm'
@@ -81,13 +95,8 @@ packer.startup(function()
     use 'romgrk/barbar.nvim'
 
     -- Colors
-    use 'morhetz/gruvbox'
-    -- use 'pantharshit00/vim-prisma'
-    -- use 'chriskempson/base16-vim'
+    use 'gruvbox-community/gruvbox'
     use 'norcalli/nvim-colorizer.lua'
-    -- use 'joshdick/onedark.vim'
-    use 'tjdevries/colorbuddy.nvim'
-    -- use 'ahmedmohamed-hue/material.nvim'
 
     -- Formatings
     use {'prettier/vim-prettier', run = 'yarn install'}

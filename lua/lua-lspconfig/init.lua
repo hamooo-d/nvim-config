@@ -96,6 +96,7 @@ local tsserver_commands = {
 }
 
 local function setup_servers()
+
     require'lspinstall'.setup()
 
     -- get all installed servers
@@ -106,14 +107,16 @@ local function setup_servers()
 
         -- language specific config
         if server == "lua" then config.settings = lua_settings end
+
         if server == "typescript" then
             config.commands = tsserver_commands
         end
 
         require'lspconfig'[server].setup(config)
+
     end
 end
-
+setup_servers()
 setup_servers()
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] =

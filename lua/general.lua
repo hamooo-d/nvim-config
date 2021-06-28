@@ -99,12 +99,12 @@ require("nvim-autopairs").setup()
 
 -- Auto Prettier formatting
 -- TODO: fix autoformatting
-cmd [[autocmd BufWritePre *.tsx  :PrettierAsync]]
-cmd [[autocmd BufWritePre *.ts   :PrettierAsync]]
-cmd [[autocmd BufWritePre *.json   :PrettierAsync]]
-cmd [[autocmd BufWritePre *.jsx  :PrettierAsync]]
-cmd [[autocmd BufWritePre *.css  :PrettierAsync]]
-cmd [[autocmd BufWritePre *.scss :PrettierAsync]]
+cmd [[autocmd BufWritePre *.tsx  :Prettier]]
+cmd [[autocmd BufWritePre *.ts   :Prettier]]
+cmd [[autocmd BufWritePre *.json   :Prettier]]
+cmd [[autocmd BufWritePre *.jsx  :Prettier]]
+cmd [[autocmd BufWritePre *.css  :Prettier]]
+cmd [[autocmd BufWritePre *.scss :Prettier]]
 -- cmd [[autocmd BufWritePre *.rs :RustFmt]]
 cmd [[ autocmd BufWrite *.lua call LuaFormat()]]
 cmd [[ autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 1000)]]

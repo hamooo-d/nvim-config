@@ -9,7 +9,9 @@ g.nvim_tree_follow = 1 -- "0 by default, this option allows the cursor to be upd
 g.nvim_tree_auto_ignore_ft = 'startify' -- "empty by default, don't auto open tree on specific filetypes.
 g.nvim_tree_width = 25
 g.nvim_tree_ignore = {'.git', 'node_modules', '.cache'}
+
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
+
 g.nvim_tree_bindings = {
     -- mappings
     ["<CR>"] = tree_cb("edit"),

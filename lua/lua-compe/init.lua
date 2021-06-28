@@ -21,7 +21,7 @@ require'compe'.setup {
         vsnip = {kind = "  "},
         nvim_lsp = {kind = "  "},
         nvim_lua = false,
-        spell = {kind = "  "},
+        spell = {kind = "  ", filetypes = {"markdown", "gitcommit"}},
         tags = false,
         snippets_nvim = {kind = "  "},
         ultisnips = {kind = "  "},

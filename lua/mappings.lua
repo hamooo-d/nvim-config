@@ -71,6 +71,7 @@ vim.cmd [[inoremap <silent><expr> <C-e> compe#complete('<C-e>')]]
 
 -- Telescope
 key_mapper("n", "<Leader>ff", ':Telescope find_files<CR>')
+key_mapper("n", "<Leader>fs", ':Telescope live_grep<CR>')
 key_mapper("n", "<Leader>fb", ':Telescope buffers<CR>')
 key_mapper("n", "<Leader>fo", ':Telescope oldfiles<CR>')
 key_mapper("n", "<Leader>fh", ':Telescope help_tags<CR>')

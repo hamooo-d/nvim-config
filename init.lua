@@ -12,5 +12,3 @@ require('lua-galaxyline')
 require('lua-commenter')
 require('lua-git')
 require('lua-colorizer')
-vim.cmd [[set background=dark]]
-vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
