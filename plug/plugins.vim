@@ -29,6 +29,16 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
+" Lsp
+Plug 'neovim/nvim-lspconfig'
+Plug 'kabouzeid/nvim-lspinstall'
+Plug 'hrsh7th/nvim-compe'
+Plug 'glepnir/lspsaga.nvim'
+Plug 'onsails/lspkind-nvim'
+" Plug 'tzachar/compe-tabnine', { 'do': './install.sh' }
+Plug 'folke/lsp-trouble.nvim'
+Plug 'ray-x/lsp_signature.nvim'
+
 " Utilies
 Plug 'terrortylor/nvim-comment'
 Plug 'windwp/nvim-ts-autotag'
