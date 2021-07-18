@@ -27,7 +27,7 @@ local efm_languages = {
 
 lsp_config.efm.setup({
   cmd = {
-    "efm-langserver",
+    "/home/ahmed/go/bin/efm-langserver",
     "-c",
     efm_config,
     "-logfile",

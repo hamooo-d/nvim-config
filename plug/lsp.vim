@@ -23,7 +23,7 @@ inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 " inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 " Auto-format
-autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync()
+autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync()
+autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync()
+autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_sync()
