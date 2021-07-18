@@ -41,6 +41,9 @@ Plug 'folke/lsp-trouble.nvim'
 Plug 'ray-x/lsp_signature.nvim'
 Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 
+" Startscreen
+Plug 'mhinz/vim-startify'
+
 " Syntax and langauge support
 Plug 'mboughaba/i3config.vim'
 Plug 'pantharshit00/vim-prisma'
