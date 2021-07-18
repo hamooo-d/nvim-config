@@ -35,9 +35,14 @@ Plug 'kabouzeid/nvim-lspinstall'
 Plug 'hrsh7th/nvim-compe'
 Plug 'glepnir/lspsaga.nvim'
 Plug 'onsails/lspkind-nvim'
-" Plug 'tzachar/compe-tabnine', { 'do': './install.sh' }
 Plug 'folke/lsp-trouble.nvim'
 Plug 'ray-x/lsp_signature.nvim'
+Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
+
+" Syntax and langauge support
+Plug 'mboughaba/i3config.vim'
+Plug 'pantharshit00/vim-prisma'
+Plug 'ekalinin/Dockerfile.vim'
 
 " Utilies
 Plug 'terrortylor/nvim-comment'

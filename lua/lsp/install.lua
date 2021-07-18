@@ -21,7 +21,6 @@ local function setup_servers()
       config.cmd = { "tailwindcss-intellisense", "--stdio" }
     end
 
-    require'lspconfig'[server].setup(config)
   end
 
 end

@@ -88,9 +88,12 @@ nnoremap <silent> <S-Tab> :BufferPrevious<CR>
 nnoremap <silent> <C-q> :BufferClose<CR>
 
 " Telescope
-nnoremap <Leader>ff :Telescope find_files<cr>
-nnoremap <Leader>fs :Telescope live_grep<cr>
-nnoremap <Leader>fb :Telescope buffers<cr>
-nnoremap <Leader>fh :Telescope help_tags<cr>
-nnoremap <Leader>fg :Telescope<cr>git
+nnoremap <silent> <Leader>ff :Telescope find_files<cr>
+nnoremap <silent> <Leader>fs :Telescope live_grep<cr>
+nnoremap <silent> <Leader>fo :Telescope oldfiles<cr>
+nnoremap <silent> <Leader>fb :Telescope buffers<cr>
+nnoremap <silent> <Leader>fh :Telescope help_tags<cr>
+nnoremap <silent> <Leader>fg :Telescope<cr>git
 
+" Lsp
+nnoremap <silent> <Leader>k :Lspsaga show_line_diagnostics<CR>
