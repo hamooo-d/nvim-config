@@ -15,6 +15,8 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 " Colorscheme
 Plug 'gruvbox-community/gruvbox'
+Plug 'navarasu/onedark.nvim'
+Plug 'tiagovla/tokyodark.nvim'
 
 " Icons
 Plug 'kyazdani42/nvim-web-devicons'
