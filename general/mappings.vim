@@ -7,6 +7,7 @@ imap <C-l> <C-w>l
 
 " g Leader key
 let mapleader=" "
+let g:mapleader=" "
 
 nnoremap <Space> <Nop>
 

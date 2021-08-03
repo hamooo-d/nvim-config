@@ -1,9 +1,12 @@
+let mapleader=" "
+let g:mapleader=" "
+
 " Saga
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua require'lspsaga.provider'.preview_definition()<CR>
 nnoremap <silent> gr <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>
 nmap <silent> <C-Space> <cmd>lua require('lspsaga.codeaction').code_action()<CR>
-nnoremap <silent> <Leader>a <cmd>lua require('lspsaga.codeaction').code_action()<CR>
+nnoremap <silent> <Leader>ca <cmd>lua require('lspsaga.codeaction').code_action()<CR>
 vnoremap <silent> <Leader>ca <cmd>'<,'>lua require('lspsaga.codeaction').range_code_action()<CR>
 nnoremap <silent> <Leader>cr <cmd>lua require('lspsaga.rename').rename()<CR>
 nnoremap <silent> <Leader>f <cmd>lua vim.lsp.buf.formatting()<CR>
@@ -24,6 +27,8 @@ inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 
 " Auto-format
 autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync()
-autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync()
+autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync(nill, 900)
 autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync()
 autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_sync()
+autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync()
+autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync()

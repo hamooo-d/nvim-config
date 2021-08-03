@@ -2,7 +2,7 @@ local function buf_option(...)
   vim.api.nvim_buf_set_option(bufnr, ...)
 end
 
-local function on_attach(client)
+local function on_attach()
   buf_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 end
 
