@@ -48,6 +48,8 @@ Plug 'mhinz/vim-startify'
 Plug 'mboughaba/i3config.vim'
 Plug 'pantharshit00/vim-prisma'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
 
 " Utilies
 Plug 'terrortylor/nvim-comment'
