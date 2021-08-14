@@ -57,6 +57,8 @@ Plug 'windwp/nvim-ts-autotag'
 Plug 'windwp/nvim-autopairs'
 Plug 'voldikss/vim-floaterm'
 Plug 'kevinhwang91/rnvimr'
+Plug 'airblade/vim-rooter'
+Plug 'easymotion/vim-easymotion'
 
 
 call plug#end()

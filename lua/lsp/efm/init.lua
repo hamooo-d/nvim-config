@@ -27,7 +27,7 @@ local efm_languages = {
 
 lsp_config.efm.setup({
   cmd = {
-    "/home/ahmed/.config/nvim/bin/go/bin/efm-langserver",
+    "/home/ahmed/.config/nvim/bin/efm-langserver",
     "-c",
     efm_config,
     "-logfile",

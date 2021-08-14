@@ -19,4 +19,5 @@ require('lsp/html')
 require('lsp/css')
 require('lsp/lua')
 require('lsp/rust')
+require('lsp/prisma')
 
