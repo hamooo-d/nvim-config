@@ -4,9 +4,8 @@ require('plugins/galaxyline')
 require('plugins/telescope')
 require('plugins/lspkind')
 require('plugins/gitsigns')
-
 require('nvim-ts-autotag').setup()
-require('nvim-autopairs').setup()
+-- require('nvim-autopairs').setup()
 require('colorizer').setup()
 
 require('lsp/install')

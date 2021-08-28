@@ -35,6 +35,7 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set relativenumber
 set incsearch
 set completeopt=menuone,noselect
+set timeoutlen=500
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 

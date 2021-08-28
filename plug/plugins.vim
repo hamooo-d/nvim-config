@@ -17,6 +17,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'gruvbox-community/gruvbox'
 Plug 'navarasu/onedark.nvim'
 Plug 'tiagovla/tokyodark.nvim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Icons
 Plug 'kyazdani42/nvim-web-devicons'
@@ -54,11 +55,12 @@ Plug 'hrsh7th/vim-vsnip-integ'
 " Utilies
 Plug 'terrortylor/nvim-comment'
 Plug 'windwp/nvim-ts-autotag'
-Plug 'windwp/nvim-autopairs'
+Plug 'jiangmiao/auto-pairs'
 Plug 'voldikss/vim-floaterm'
 Plug 'kevinhwang91/rnvimr'
 Plug 'airblade/vim-rooter'
 Plug 'easymotion/vim-easymotion'
-
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'tpope/vim-surround'
 
 call plug#end()

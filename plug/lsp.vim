@@ -27,8 +27,9 @@ inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 
 " Auto-format
 autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync()
-autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync(nill, 100)
+autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync()
 autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync()
 autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_sync()
 autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync()
 autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync()
+autocmd BufWritePre *.prisma lua vim.lsp.buf.formatting_sync()

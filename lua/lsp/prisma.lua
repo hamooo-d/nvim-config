@@ -1,1 +1,1 @@
-require'lspconfig'.prismals.setup{}
+-- require'lspconfig'.prismals.setup{}
