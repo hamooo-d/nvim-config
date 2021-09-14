@@ -52,6 +52,9 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 
+" Go
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 " Utilies
 Plug 'terrortylor/nvim-comment'
 Plug 'windwp/nvim-ts-autotag'

@@ -33,3 +33,5 @@ autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_sync()
 autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync()
 autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync()
 autocmd BufWritePre *.prisma lua vim.lsp.buf.formatting_sync()
+autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync()
+
