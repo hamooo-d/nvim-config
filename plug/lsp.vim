@@ -26,12 +26,14 @@ inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 " inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 " Auto-format
-autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync()
-autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync()
-autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync()
-autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_sync()
-autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync()
-autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync()
-autocmd BufWritePre *.prisma lua vim.lsp.buf.formatting_sync()
-autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync()
+autocmd BufWritePre *.js lua vim.lsp.buf.formatting_seq_sync()
+autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_seq_sync()
+autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_seq_sync()
+autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_seq_sync()
+autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_seq_sync()
+autocmd BufWritePre *.json lua vim.lsp.buf.formatting_seq_sync()
+autocmd BufWritePre *.prisma lua vim.lsp.buf.formatting_seq_sync()
+autocmd BufWritePre *.go lua vim.lsp.buf.formatting_seq_sync()
+autocmd BufWritePre *.json lua vim.lsp.buf.range_formatting({},{0,0},{vim.fn.line("$"),0})
+
 

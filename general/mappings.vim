@@ -32,6 +32,8 @@ nnoremap <silent> <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <silent> <S-TAB> :bprevious<CR>
 
+nnoremap Y Y
+
 " Move selected line / block of text in visual mode
 " shift + k to move up
 " shift + j to move down
