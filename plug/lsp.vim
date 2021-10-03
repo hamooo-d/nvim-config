@@ -34,6 +34,7 @@ autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_seq_sync()
 autocmd BufWritePre *.json lua vim.lsp.buf.formatting_seq_sync()
 autocmd BufWritePre *.prisma lua vim.lsp.buf.formatting_seq_sync()
 autocmd BufWritePre *.go lua vim.lsp.buf.formatting_seq_sync()
+autocmd BufWritePre *.graphql lua vim.lsp.buf.formatting_seq_sync()
 autocmd BufWritePre *.json lua vim.lsp.buf.range_formatting({},{0,0},{vim.fn.line("$"),0})
 
 
