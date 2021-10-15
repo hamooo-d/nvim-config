@@ -14,9 +14,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 
 " Colorscheme
-Plug 'gruvbox-community/gruvbox'
-Plug 'navarasu/onedark.nvim'
-Plug 'tiagovla/tokyodark.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Icons
@@ -24,8 +21,9 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 
 " Bars
-Plug 'romgrk/barbar.nvim'
-Plug 'glepnir/galaxyline.nvim'
+Plug 'akinsho/bufferline.nvim'
+Plug 'NTBBloodbath/galaxyline.nvim'
+Plug 'famiu/bufdelete.nvim'
 
 " Git
 Plug 'lewis6991/gitsigns.nvim'
@@ -35,8 +33,13 @@ Plug 'tpope/vim-rhubarb'
 " Lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
-Plug 'hrsh7th/nvim-compe'
-Plug 'glepnir/lspsaga.nvim'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-emoji'
+Plug 'hrsh7th/nvim-cmp'
+" Plug 'glepnir/lspsaga.nvim'
+Plug 'tami5/lspsaga.nvim'
 Plug 'onsails/lspkind-nvim'
 Plug 'folke/lsp-trouble.nvim'
 Plug 'ray-x/lsp_signature.nvim'
@@ -46,19 +49,13 @@ Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 Plug 'mhinz/vim-startify'
 
 " Syntax and langauge support
-Plug 'mboughaba/i3config.vim'
-Plug 'pantharshit00/vim-prisma'
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
-
-" Go
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'hrsh7th/vim-vsnip'
 
 " Utilies
-Plug 'terrortylor/nvim-comment'
+Plug 'tpope/vim-commentary'
 Plug 'windwp/nvim-ts-autotag'
-Plug 'jiangmiao/auto-pairs'
+Plug 'windwp/nvim-autopairs'
 Plug 'voldikss/vim-floaterm'
 Plug 'kevinhwang91/rnvimr'
 Plug 'airblade/vim-rooter'

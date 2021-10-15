@@ -82,13 +82,13 @@ nnoremap <silent> <Leader>z :source %<CR>
 nnoremap <silent> <C-e> :NvimTreeToggle<CR>
 
 " Commentet
-vnoremap <silent> <Leader>/ :CommentToggle<CR>
-nnoremap <silent> <Leader>/ :CommentToggle<CR>
+vnoremap <silent> <Leader>/ :Commentary<CR>
+nnoremap <silent> <Leader>/ :Commentary<CR>
 
 " BarBar
-nnoremap <silent> <Tab> :BufferNext<CR>
-nnoremap <silent> <S-Tab> :BufferPrevious<CR>
-nnoremap <silent> <C-q> :BufferClose<CR>
+nnoremap <silent> <Tab> :BufferLineCycleNext<CR>
+nnoremap <silent> <S-Tab> :BufferLineCyclePrev<CR>
+nnoremap <silent> <C-q> :Bdelete<CR>
 
 " Telescope
 nnoremap <silent> <Leader>ff :Telescope find_files<cr>

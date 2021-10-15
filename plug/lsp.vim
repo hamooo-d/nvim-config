@@ -19,12 +19,6 @@ nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_sag
 nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
 nnoremap <silent> <leader>cl <cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>
 
-" Compe
-inoremap <silent><expr> <C-Space> compe#complete()
-inoremap <silent><expr> <CR>      compe#confirm('<CR>')
-" inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
-" inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
-
 " Auto-format
 autocmd BufWritePre *.js lua vim.lsp.buf.formatting_seq_sync()
 autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_seq_sync()

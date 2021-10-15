@@ -58,12 +58,6 @@ let g:nvim_tree_icons = {
     \   'symlink': "",
     \   'symlink_open': "",
     \   },
-    \   'lsp': {
-    \     'hint': "",
-    \     'info': "",
-    \     'warning': "",
-    \     'error': "",
-    \   }
     \ }
 
 nnoremap <leader>r :NvimTreeRefresh<CR>

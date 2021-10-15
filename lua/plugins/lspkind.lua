@@ -1,3 +1,8 @@
+vim.fn.sign_define("LspDiagnosticsSignError", { text = " 🞮", numhl = "LspDiagnosticsDefaultError" })
+vim.fn.sign_define("LspDiagnosticsSignWarning", { text = " ▲", numhl = "LspDiagnosticsDefaultWarning" })
+vim.fn.sign_define("LspDiagnosticsSignInformation", { text = " ⁈", numhl = "LspDiagnosticsDefaultInformation" })
+vim.fn.sign_define("LspDiagnosticsSignHint", { text = " ⯁", numhl = "LspDiagnosticsDefaultHint" })
+
 require('lspkind').init({
     with_text = false,
     symbol_map = {
@@ -39,3 +44,4 @@ require'lspsaga'.init_lsp_saga {
         virtual_text = true
     }
 }
+

@@ -1,10 +1,8 @@
-local on_attach = require('lsp.on_attach')
+local make_config = require('lsp.default')
+local config = make_config()
 
--- npm install -g typescript typescript-language-server
-require'lspconfig'.tsserver.setup({
-  on_attach = function(client, bufnr)
+config.on_attach = function(client, bufnr)
     client.resolved_capabilities.document_formatting = false
-    on_attach(client)
 
     local ts_utils = require("nvim-lsp-ts-utils")
 
@@ -26,4 +24,7 @@ require'lspconfig'.tsserver.setup({
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>cR", ":TSLspRenameFile<CR>", {silent = true})
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>ci", ":TSLspImportAll<CR>", {silent = true})
   end
-})
+
+
+-- npm install -g typescript typescript-language-server
+require'lspconfig'.tsserver.setup{config}
