@@ -1,9 +1,15 @@
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+local treesitter = require'nvim-treesitter.configs'
+
+treesitter.setup {
+  ensure_installed = {
+    'c', 'cpp', 'dart', 'go', 'html', 'java', 'javascript', 'python', 'ruby',
+    'rust', 'typescript', 'json', 'css'
+  },
   highlight = {
-    enable = true,              -- false will disable the whole extension
+    enable = true,
+    additional_vim_regex_highlighting = true
   },
   indent = {
-    enable = true
-  },
+    enable = false
+  }
 }
