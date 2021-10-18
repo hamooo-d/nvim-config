@@ -69,5 +69,7 @@ Plug 'airblade/vim-rooter'
 Plug 'easymotion/vim-easymotion'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tpope/vim-surround'
+Plug 'mbbill/undotree'
 
 call plug#end()
+

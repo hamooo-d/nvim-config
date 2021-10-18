@@ -6,3 +6,4 @@ source $HOME/.config/nvim/plug/floatterm.vim
 source $HOME/.config/nvim/plug/startify.vim
 source $HOME/.config/nvim/plug/rooter.vim
 source $HOME/.config/nvim/plug/closetag.vim
+source $HOME/.config/nvim/plug/undotree.vim
