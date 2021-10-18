@@ -11,3 +11,4 @@ source $HOME/.config/nvim/general/mappings.vim
 source $HOME/.config/nvim/general/colorscheme.vim
 source $HOME/.config/nvim/general/highlights.vim
 
+

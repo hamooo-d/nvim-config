@@ -1,2 +1,4 @@
 -- npm install -g vscode-css-languageserver-bin
-require'lspconfig'.cssls.setup{}
+local make_config = require('lsp.default')
+local config = make_config()
+require'lspconfig'.cssls.setup{config}

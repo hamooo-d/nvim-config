@@ -15,14 +15,18 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 " Colorscheme
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'navarasu/onedark.nvim'
+
 
 " Icons
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
+Plug 'yamatsum/nvim-nonicons'
 
 " Bars
 Plug 'akinsho/bufferline.nvim'
-Plug 'NTBBloodbath/galaxyline.nvim'
+Plug 'glepnir/galaxyline.nvim'
+Plug 'shadmansaleh/lualine.nvim'
 Plug 'famiu/bufdelete.nvim'
 
 " Git
@@ -38,12 +42,13 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-emoji'
 Plug 'hrsh7th/nvim-cmp'
-Plug 'glepnir/lspsaga.nvim'
-" Plug 'tami5/lspsaga.nvim'
+" Plug 'glepnir/lspsaga.nvim'
+Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim51' }
 Plug 'onsails/lspkind-nvim'
 Plug 'folke/lsp-trouble.nvim'
 Plug 'ray-x/lsp_signature.nvim'
 Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
+Plug 'nvim-lua/lsp-status.nvim'
 
 " Startscreen
 Plug 'mhinz/vim-startify'
@@ -56,8 +61,8 @@ Plug 'hrsh7th/vim-vsnip'
 
 " Utilies
 Plug 'tpope/vim-commentary'
-Plug 'windwp/nvim-ts-autotag'
-Plug 'windwp/nvim-autopairs'
+Plug 'alvan/vim-closetag'
+Plug 'jiangmiao/auto-pairs'
 Plug 'voldikss/vim-floaterm'
 Plug 'kevinhwang91/rnvimr'
 Plug 'airblade/vim-rooter'

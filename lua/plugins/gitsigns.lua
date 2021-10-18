@@ -76,7 +76,7 @@ vim.g.nvim_tree_icons = {
         staged = "✓",
         unmerged = "",
         renamed = "➜",
-        untracked = ""
+        untracked = ""
     },
     folder = {
         default = "",

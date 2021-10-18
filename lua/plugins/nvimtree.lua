@@ -13,7 +13,7 @@ require'nvim-tree'.setup {
   open_on_tab         = false,
   -- hijack the cursor in the tree to put it at the start of the filename
   hijack_cursor       = true,
-  -- updates the root directory of the tree on `DirChanged` (when your run `:cd` usually) 
+  -- updates the root directory of the tree on `DirChanged` (when your run `:cd` usually)
   update_cwd          = true,
   -- show lsp diagnostics in the signcolumn
   -- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
@@ -35,7 +35,7 @@ require'nvim-tree'.setup {
     args = {}
   },
     diagnostics = {
-        enable = true,
+        enable = false,
         icons = {
           hint = "",
           info = "",

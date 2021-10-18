@@ -1,7 +1,8 @@
 local make_config = require('lsp.default')
 local config = make_config()
 
-config.on_attach = function(client, bufnr)
+
+local on_attach = function(client, bufnr)
     client.resolved_capabilities.document_formatting = false
 
     local ts_utils = require("nvim-lsp-ts-utils")
@@ -27,4 +28,7 @@ config.on_attach = function(client, bufnr)
 
 
 -- npm install -g typescript typescript-language-server
-require'lspconfig'.tsserver.setup{config}
+require'lspconfig'.tsserver.setup{
+    on_attach = on_attach,
+    capabilities = config.capabilities
+}
