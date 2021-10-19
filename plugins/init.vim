@@ -1,9 +1,9 @@
-source $HOME/.config/nvim/plug/plugins.vim
-source $HOME/.config/nvim/plug/nvimtree.vim
-source $HOME/.config/nvim/plug/lsp.vim
-source $HOME/.config/nvim/plug/indent_blankline.vim
-source $HOME/.config/nvim/plug/floatterm.vim
-source $HOME/.config/nvim/plug/startify.vim
-source $HOME/.config/nvim/plug/rooter.vim
-" source $HOME/.config/nvim/plug/closetag.vim
-source $HOME/.config/nvim/plug/undotree.vim
+source $HOME/.config/nvim/plugins/plugins.vim
+source $HOME/.config/nvim/plugins/nvimtree.vim
+source $HOME/.config/nvim/plugins/lsp.vim
+source $HOME/.config/nvim/plugins/indent_blankline.vim
+source $HOME/.config/nvim/plugins/floatterm.vim
+source $HOME/.config/nvim/plugins/startify.vim
+source $HOME/.config/nvim/plugins/rooter.vim
+" source $HOME/.config/nvim/plugins/closetag.vim
+source $HOME/.config/nvim/plugins/undotree.vim
