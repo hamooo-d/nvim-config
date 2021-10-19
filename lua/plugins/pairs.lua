@@ -1,5 +1,3 @@
-require('nvim-ts-autotag').setup()
-
 require('nvim-autopairs').setup({
   disable_filetype = { "TelescopePrompt" , "vim" },
 })
@@ -14,3 +12,5 @@ require("nvim-autopairs.completion.cmp").setup({
     tex = '{'
   }
 })
+
+require('nvim-ts-autotag').setup()

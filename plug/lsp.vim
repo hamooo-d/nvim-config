@@ -21,7 +21,7 @@ nnoremap <silent> <leader>cl <cmd>lua require'lspsaga.diagnostic'.show_line_diag
 
 " Auto-format
 autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.graphql,*.json,*.md,*.mdx,*.svelte,*.yml,*yaml lua vim.lsp.buf.formatting_seq_sync()
-" autocmd BufWritePre *.js lua vim.lsp.buf.formatting_seq_sync()
+autocmd BufWritePre *.lua lua vim.lsp.buf.formatting_seq_sync()
 " autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_seq_sync()
 " autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_seq_sync()
 " autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_seq_sync()

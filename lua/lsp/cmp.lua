@@ -11,55 +11,51 @@ local lspkind = require('lspkind')
 -- end
 
 cmp.setup({
-    completion = {
-        completeopt = 'menu,menuone,noinsert',
-      },
-     snippet = {
-      expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body)
-      end,
-    },
+    completion = {completeopt = 'menu,menuone,noinsert'},
+    snippet = {expand = function(args) vim.fn["vsnip#anonymous"](args.body) end},
     sources = {
-      { name = 'nvim_lsp' },
-      { name = 'vsnip' },
-      { name = 'path' },
-      { name = 'emoji' }
-      -- more sources
+        {name = 'nvim_lsp'}, {name = 'vsnip'}, {name = 'path'}, {name = 'emoji'}
+        -- more sources
     },
     formatting = {
-      format = lspkind.cmp_format({
+        format = lspkind.cmp_format({
             with_text = false,
             symbol_map = {
-              Text = '  ',
-              Method = '  ',
-              Function = '  ',
-              Constructor = '  ',
-              Variable = '[]',
-              Class = '  ',
-              Interface = ' 蘒',
-              Module = '  ',
-              Property = '  ',
-              Unit = ' 塞 ',
-              Value = '  ',
-              Enum = ' 練',
-              Keyword = '  ',
-              Snippet = '  ',
-              Color = '',
-              File = '',
-              Folder = ' ﱮ ',
-              EnumMember = '  ',
-              Constant = '  ',
-              Struct = '  '
-            },
-        }),
+                Text = '  ',
+                Method = '  ',
+                Function = '  ',
+                Constructor = '  ',
+                Variable = '[]',
+                Class = '  ',
+                Interface = ' 蘒',
+                Module = '  ',
+                Property = '  ',
+                Unit = ' 塞 ',
+                Value = '  ',
+                Enum = ' 練',
+                Keyword = '  ',
+                Snippet = '  ',
+                Color = '',
+                File = '',
+                Folder = ' ﱮ ',
+                EnumMember = '  ',
+                Constant = '  ',
+                Struct = '  '
+            }
+        })
     },
     mapping = {
-      ['<CR>'] = cmp.mapping.confirm {
-        behavior = cmp.ConfirmBehavior.Replace,
-        select = true,
-      },
-      ['<C-Space>'] = cmp.mapping.complete(),
-      ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
-      ['<S-Tab>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
-          },
-    })
+
+        ['<CR>'] = cmp.mapping.confirm {
+            behavior = cmp.ConfirmBehavior.Replace,
+            select = true
+        },
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'}),
+        ['<S-Tab>'] = cmp.mapping.select_prev_item({
+            behavior = cmp.SelectBehavior.Select
+        })
+
+    }
+
+})

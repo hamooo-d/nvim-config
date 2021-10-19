@@ -61,8 +61,10 @@ Plug 'hrsh7th/vim-vsnip'
 
 " Utilies
 Plug 'tpope/vim-commentary'
-Plug 'alvan/vim-closetag'
-Plug 'jiangmiao/auto-pairs'
+" Plug 'alvan/vim-closetag'
+" Plug 'jiangmiao/auto-pairs'
+Plug 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-ts-autotag'
 Plug 'voldikss/vim-floaterm'
 Plug 'kevinhwang91/rnvimr'
 Plug 'airblade/vim-rooter'

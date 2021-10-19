@@ -1,32 +1,36 @@
-vim.fn.sign_define("LspDiagnosticsSignError", { text = " 🞮", numhl = "LspDiagnosticsDefaultError" })
-vim.fn.sign_define("LspDiagnosticsSignWarning", { text = " ▲", numhl = "LspDiagnosticsDefaultWarning" })
-vim.fn.sign_define("LspDiagnosticsSignInformation", { text = " ⁈", numhl = "LspDiagnosticsDefaultInformation" })
-vim.fn.sign_define("LspDiagnosticsSignHint", { text = " ⯁", numhl = "LspDiagnosticsDefaultHint" })
+vim.fn.sign_define("LspDiagnosticsSignError",
+                   {text = " 🞮", numhl = "LspDiagnosticsDefaultError"})
+vim.fn.sign_define("LspDiagnosticsSignWarning",
+                   {text = " ▲", numhl = "LspDiagnosticsDefaultWarning"})
+vim.fn.sign_define("LspDiagnosticsSignInformation",
+                   {text = " ⁈", numhl = "LspDiagnosticsDefaultInformation"})
+vim.fn.sign_define("LspDiagnosticsSignHint",
+                   {text = " ⯁", numhl = "LspDiagnosticsDefaultHint"})
 
 require('lspkind').init({
     with_text = false,
     symbol_map = {
-      Text = '  ',
-      Method = '  ',
-      Function = '  ',
-      Constructor = '  ',
-      Variable = '[]',
-      Class = '  ',
-      Interface = ' 蘒',
-      Module = '  ',
-      Property = '  ',
-      Unit = ' 塞 ',
-      Value = '  ',
-      Enum = ' 練',
-      Keyword = '  ',
-      Snippet = '  ',
-      Color = '',
-      File = '',
-      Folder = ' ﱮ ',
-      EnumMember = '  ',
-      Constant = '  ',
-      Struct = '  '
-    },
+        Text = '  ',
+        Method = '  ',
+        Function = '  ',
+        Constructor = '  ',
+        Variable = '[]',
+        Class = '  ',
+        Interface = ' 蘒',
+        Module = '  ',
+        Property = '  ',
+        Unit = ' 塞 ',
+        Value = '  ',
+        Enum = ' 練',
+        Keyword = '  ',
+        Snippet = '  ',
+        Color = '',
+        File = '',
+        Folder = ' ﱮ ',
+        EnumMember = '  ',
+        Constant = '  ',
+        Struct = '  '
+    }
 })
 
 require'lspsaga'.init_lsp_saga {
