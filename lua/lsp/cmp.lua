@@ -14,7 +14,8 @@ cmp.setup({
     completion = {completeopt = 'menu,menuone,noinsert'},
     snippet = {expand = function(args) vim.fn["vsnip#anonymous"](args.body) end},
     sources = {
-        {name = 'nvim_lsp'}, {name = 'vsnip'}, {name = 'emoji'}
+        {name = 'nvim_lsp'}, {name = 'vsnip'}, {name = 'buffer'},
+        {name = 'emoji'}
         -- more sources
     },
     formatting = {

@@ -20,16 +20,6 @@ nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_sag
 nnoremap <silent> <leader>cl <cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>
 
 " Auto-format
-autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.graphql,*.json,*.md,*.mdx,*.svelte,*.yml,*yaml lua vim.lsp.buf.formatting_seq_sync()
-autocmd BufWritePre *.lua lua vim.lsp.buf.formatting_seq_sync()
-" autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_seq_sync()
-" autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_seq_sync()
-" autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_seq_sync()
-" autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_seq_sync()
-" autocmd BufWritePre *.json lua vim.lsp.buf.formatting_seq_sync()
-" autocmd BufWritePre *.prisma lua vim.lsp.buf.formatting_seq_sync()
-" autocmd BufWritePre *.go lua vim.lsp.buf.formatting_seq_sync()
-" autocmd BufWritePre *.graphql lua vim.lsp.buf.formatting_seq_sync()
-" autocmd BufWritePre *.json lua vim.lsp.buf.range_formatting({},{0,0},{vim.fn.line("$"),0})
-
-
+autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.graphql,*.json,*.md,*.mdx,*.svelte,*.yml,*yaml,*.lua,*.go lua vim.lsp.buf.formatting_seq_sync()
+autocmd BufWritePre *.tsx :TSLspOrganizeSync
+autocmd BufWritePre *.go lua GoImports(1000)

@@ -18,9 +18,11 @@ let g:startify_custom_header =
 
 let g:startify_bookmarks = [
             \ { 'c': '~/.config/i3/config' },
-            \ { 't': '~/.config/alacritty/alacritty.yml' },
-            \ { 's': '~/.config/nvim/init.vim' },
+            \ { 't': '~/.config/kitty/kitty.conf' },
+            \ { 'v': '~/.config/nvim/init.vim' },
+            \ { 't': '~/.tmux.conf.local' },
+            \ { 'z': '~/.zshrc' },
             \ { 'd': '~/dev/cas/' },
             \ ]
 
-let g:startify_enable_special = 0
+let g:startify_enable_special = 1

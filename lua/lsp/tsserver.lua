@@ -1,5 +1,5 @@
 local make_config = require('lsp.default')
-local config = make_config()
+local default_config = make_config()
 
 local on_attach = function(client, bufnr)
     client.resolved_capabilities.document_formatting = false
@@ -28,8 +28,7 @@ local on_attach = function(client, bufnr)
                                 {silent = true})
 end
 
--- npm install -g typescript typescript-language-server
 require'lspconfig'.tsserver.setup {
     on_attach = on_attach,
-    capabilities = config.capabilities
+    capabilities = default_config.capabilities
 }

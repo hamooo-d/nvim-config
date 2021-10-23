@@ -9,6 +9,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-media-files.nvim'
 
 " Explorer
 Plug 'kyazdani42/nvim-tree.lua'
@@ -36,13 +37,11 @@ Plug 'tpope/vim-rhubarb'
 
 " Lsp
 Plug 'neovim/nvim-lspconfig'
-Plug 'kabouzeid/nvim-lspinstall'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-emoji'
 Plug 'hrsh7th/nvim-cmp'
-" Plug 'glepnir/lspsaga.nvim'
 Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim51' }
 Plug 'onsails/lspkind-nvim'
 Plug 'folke/lsp-trouble.nvim'
@@ -56,13 +55,10 @@ Plug 'mhinz/vim-startify'
 " Syntax and langauge support
 Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'hrsh7th/vim-vsnip'
-" Plug 'HerringtonDarkholme/yats.vim'
-" Plug 'maxmellon/vim-jsx-pretty'
+Plug 'mboughaba/i3config.vim'
 
 " Utilies
 Plug 'tpope/vim-commentary'
-" Plug 'alvan/vim-closetag'
-" Plug 'jiangmiao/auto-pairs'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'voldikss/vim-floaterm'
@@ -72,6 +68,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tpope/vim-surround'
 Plug 'mbbill/undotree'
+
 
 call plug#end()
 
