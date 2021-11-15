@@ -52,5 +52,8 @@ require'nvim-tree'.setup {
             -- list of mappings to set on the tree manually
             list = {}
         }
+    },
+    nvim_tree_ignore = {
+        '.git', 'node_modules', '.cache', '.eslintcache', 'tmp', '.yarn'
     }
 }

@@ -32,7 +32,7 @@ lsp_config.efm.setup({
     },
     filetypes = {
         'javascript', 'javascriptreact', 'javascript.jsx', 'typescript',
-        'typescriptreact', 'typescript.tsx', 'lua'
+        'typescriptreact', 'typescript.tsx', 'lua', "graphql"
     },
     root_dir = lsp_config.util.root_pattern(unpack(efm_root_markers)),
     init_options = {documentFormatting = true},
