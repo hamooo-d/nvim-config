@@ -53,6 +53,7 @@ require'nvim-tree'.setup {
             list = {}
         }
     },
+    nvim_tree_gitignore = true,
     nvim_tree_ignore = {
         '.git', 'node_modules', '.cache', '.eslintcache', 'tmp', '.yarn'
     }
