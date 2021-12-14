@@ -43,7 +43,7 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-emoji'
 Plug 'hrsh7th/nvim-cmp'
-Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim51' }
+Plug 'tami5/lspsaga.nvim'
 Plug 'onsails/lspkind-nvim'
 Plug 'folke/lsp-trouble.nvim'
 Plug 'ray-x/lsp_signature.nvim'

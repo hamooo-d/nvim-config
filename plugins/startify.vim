@@ -20,7 +20,7 @@ let g:startify_bookmarks = [
             \ { 'c': '~/.config/i3/config' },
             \ { 't': '~/.config/kitty/kitty.conf' },
             \ { 'v': '~/.config/nvim/init.vim' },
-            \ { 't': '~/.tmux.conf.local' },
+            \ { 'T': '~/.tmux.conf.local' },
             \ { 'z': '~/.zshrc' },
             \ { 'd': '~/dev/cas/' },
             \ ]
