@@ -1,31 +1,27 @@
--- Eviline config for lualine
--- Author: shadmansaleh
--- Credit: glepnir
-local lualine = require 'lualine'
+local lualine = require('lualine')
 
--- Color table for highlights
--- stylua: ignore
+-- Color table for highlights stylua: ignore
 local colors = {
-    bg = '#202328',
-    fg = '#bbc2cf',
-    yellow = '#ECBE7B',
-    cyan = '#008080',
-    darkblue = '#081633',
-    green = '#98be65',
-    orange = '#FF8800',
+    bg = '#1a1b20',
+    fg = '#a9b1d6',
+    yellow = '#e0af68',
+    cyan = '#7dcfff',
+    darkblue = '#7aa2f7',
+    green = '#9ece6a',
+    orange = '#e0af68',
     violet = '#a9a1e1',
-    magenta = '#c678dd',
-    blue = '#51afef',
-    red = '#ec5f67'
+    magenta = '#bb9af7',
+    blue = '#7aa2f7',
+    red = '#f7768e'
 }
 
 local conditions = {
     buffer_not_empty = function()
-        return vim.fn.empty(vim.fn.expand '%:t') ~= 1
+        return vim.fn.empty(vim.fn.expand('%:t')) ~= 1
     end,
     hide_in_width = function() return vim.fn.winwidth(0) > 80 end,
     check_git_workspace = function()
-        local filepath = vim.fn.expand '%:p:h'
+        local filepath = vim.fn.expand('%:p:h')
         local gitdir = vim.fn.finddir('.git', filepath .. ';')
         return gitdir and #gitdir > 0 and #gitdir < #filepath
     end
@@ -58,7 +54,7 @@ local config = {
     inactive_sections = {
         -- these are to remove the defaults
         lualine_a = {},
-        lualine_v = {},
+        lualine_b = {},
         lualine_y = {},
         lualine_z = {},
         lualine_c = {},
@@ -76,13 +72,13 @@ local function ins_right(component)
     table.insert(config.sections.lualine_x, component)
 end
 
-ins_left {
+ins_left({
     function() return '▊' end,
     color = {fg = colors.blue}, -- Sets highlighting of component
     padding = {left = 0, right = 1} -- We don't need space before this
-}
+})
 
-ins_left {
+ins_left({
     -- mode component
     function()
         -- auto change color according to neovims mode
@@ -115,40 +111,40 @@ ins_left {
     end,
     color = 'LualineMode',
     padding = {right = 1}
-}
+})
 
-ins_left {
+ins_left({
     -- filesize component
     'filesize',
     cond = conditions.buffer_not_empty
-}
+})
 
-ins_left {
+ins_left({
     'filename',
     cond = conditions.buffer_not_empty,
     color = {fg = colors.magenta, gui = 'bold'}
-}
+})
 
-ins_left {'location'}
+ins_left({'location'})
 
-ins_left {'progress', color = {fg = colors.fg, gui = 'bold'}}
+ins_left({'progress', color = {fg = colors.fg, gui = 'bold'}})
 
-ins_left {
+ins_left({
     'diagnostics',
-    sources = {'nvim_lsp'},
+    sources = {'nvim_diagnostic'},
     symbols = {error = ' ', warn = ' ', info = ' '},
     diagnostics_color = {
         color_error = {fg = colors.red},
         color_warn = {fg = colors.yellow},
         color_info = {fg = colors.cyan}
     }
-}
+})
 
 -- Insert mid section. You can make any number of sections in neovim :)
 -- for lualine it's any number greater then 2
-ins_left {function() return '%=' end}
+ins_left({function() return '%=' end})
 
-ins_left {
+ins_left({
     -- Lsp server name .
     function()
         local msg = 'No Active Lsp'
@@ -165,26 +161,26 @@ ins_left {
     end,
     icon = ' LSP:',
     color = {fg = '#ffffff', gui = 'bold'}
-}
+})
 
 -- Add components to right sections
-ins_right {
+ins_right({
     'o:encoding', -- option component same as &encoding in viml
     fmt = string.upper, -- I'm not sure why it's upper case either ;)
     cond = conditions.hide_in_width,
     color = {fg = colors.green, gui = 'bold'}
-}
+})
 
-ins_right {
+ins_right({
     'fileformat',
     fmt = string.upper,
     icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
     color = {fg = colors.green, gui = 'bold'}
-}
+})
 
-ins_right {'branch', icon = '', color = {fg = colors.violet, gui = 'bold'}}
+ins_right({'branch', icon = '', color = {fg = colors.violet, gui = 'bold'}})
 
-ins_right {
+ins_right({
     'diff',
     -- Is it me or the symbol for modified us really weird
     symbols = {added = ' ', modified = '柳 ', removed = ' '},
@@ -194,14 +190,13 @@ ins_right {
         removed = {fg = colors.red}
     },
     cond = conditions.hide_in_width
-}
+})
 
-ins_right {
+ins_right({
     function() return '▊' end,
     color = {fg = colors.blue},
     padding = {left = 1}
-}
+})
 
 -- Now don't forget to initialize lualine
-
-lualine.setup({options = {theme = "onedark"}})
+lualine.setup(config)

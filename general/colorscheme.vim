@@ -4,9 +4,6 @@
 " colorscheme gruvbox
 " let g:gruvbox_contrast_dark="hard"
 " OneDark
-let g:onedark_style = 'darker'  " We need add the configs before colorscheme line
-let g:onedark_transparent_background = v:true
-let g:onedark_hide_ending_tildes = v:true
 colorscheme onedark
 
 " Tokyo Night

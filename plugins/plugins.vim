@@ -26,8 +26,8 @@ Plug 'yamatsum/nvim-nonicons'
 
 " Bars
 Plug 'akinsho/bufferline.nvim'
-Plug 'glepnir/galaxyline.nvim'
-Plug 'shadmansaleh/lualine.nvim'
+Plug 'windwp/windline.nvim'
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'famiu/bufdelete.nvim'
 
 " Git
@@ -49,6 +49,8 @@ Plug 'folke/lsp-trouble.nvim'
 Plug 'ray-x/lsp_signature.nvim'
 Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 Plug 'nvim-lua/lsp-status.nvim'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'nanotee/sqls.nvim'
 
 " Startscreen
 Plug 'mhinz/vim-startify'
@@ -62,14 +64,15 @@ Plug 'mboughaba/i3config.vim'
 Plug 'tpope/vim-commentary'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
-Plug 'voldikss/vim-floaterm'
+Plug 'akinsho/toggleterm.nvim'
 Plug 'kevinhwang91/rnvimr'
 Plug 'airblade/vim-rooter'
-Plug 'easymotion/vim-easymotion'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tpope/vim-surround'
 Plug 'mbbill/undotree'
-
+Plug 'justinmk/vim-sneak'
+Plug 'mattn/vim-gist'
+Plug 'mattn/webapi-vim'
 
 call plug#end()
 

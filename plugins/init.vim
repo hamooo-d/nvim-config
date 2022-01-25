@@ -7,3 +7,6 @@ source $HOME/.config/nvim/plugins/startify.vim
 source $HOME/.config/nvim/plugins/rooter.vim
 " source $HOME/.config/nvim/plugins/closetag.vim
 source $HOME/.config/nvim/plugins/undotree.vim
+
+
+let g:sneak#label = 1

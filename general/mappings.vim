@@ -66,6 +66,8 @@ inoremap <C-k> <C-\><C-N><C-w>k
 inoremap <C-l> <C-\><C-N><C-w>l
 tnoremap <Esc> <C-\><C-n>
 
+nnoremap <C-w> :vsplit<CR>
+
 nnoremap <silent> <C-Up>    :resize -2<CR>
 nnoremap <silent> <C-Down>  :resize +2<CR>
 nnoremap <silent> <C-Left>  :vertical resize -2<CR>
