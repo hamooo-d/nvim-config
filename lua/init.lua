@@ -12,7 +12,7 @@ require("colorizer").setup()
 
 require("lsp/cmp")
 require("plugins/pairs")
--- require('lsp/efm')
+require("lsp/docker")
 require("lsp/null-ls")
 require("lsp/tsserver")
 require("lsp/graphql")
