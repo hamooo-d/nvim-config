@@ -56,15 +56,18 @@ require("nvim-tree").setup({
 	nvim_tree_gitignore = true,
 	git = {
 		enable = true,
-		ignore = true,
-		timeout = 500,
+		ignore = false,
+		timeout = 50,
 	},
-	nvim_tree_ignore = {
-		".git",
-		"node_modules",
-		".cache",
-		".eslintcache",
-		"tmp",
-		".yarn",
+	filters = {
+		custom = {
+			".git",
+			"node_modules",
+			".cache",
+			".eslintcache",
+			"tmp",
+			".yarn",
+			".husky",
+		},
 	},
 })

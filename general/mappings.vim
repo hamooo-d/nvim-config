@@ -103,3 +103,6 @@ nnoremap <silent> <Leader>fg :Telescope<cr>git
 " Lsp
 nnoremap <silent> <Leader>k :Lspsaga show_line_diagnostics<CR>
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+"Hop
+nnoremap <silent> <Leader><Leader>w :HopWord<CR>

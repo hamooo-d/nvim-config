@@ -9,6 +9,7 @@ require("plugins/toggleterm")
 require("plugins/onedark")
 
 require("colorizer").setup()
+require("hop").setup()
 
 require("lsp/cmp")
 require("plugins/pairs")

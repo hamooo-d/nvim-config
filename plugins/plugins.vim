@@ -60,6 +60,7 @@ Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'mboughaba/i3config.vim'
 
+
 " Utilies
 Plug 'tpope/vim-commentary'
 Plug 'windwp/nvim-autopairs'
@@ -70,9 +71,9 @@ Plug 'airblade/vim-rooter'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tpope/vim-surround'
 Plug 'mbbill/undotree'
-Plug 'justinmk/vim-sneak'
 Plug 'mattn/vim-gist'
 Plug 'mattn/webapi-vim'
+Plug 'phaazon/hop.nvim'
 
 call plug#end()
 
