@@ -37,7 +37,7 @@ cmp.setup({
 		{ name = "vsnip" }, -- For vsnip users.
 	}),
 	formatting = {
-		format = lspkind.cmp_format({ with_text = false, symbol_map = icons }),
+		format = lspkind.cmp_format({ mode = 'symbol', symbol_map = icons }),
 	},
 	experimental = { ghost_text = true },
 	mapping = {

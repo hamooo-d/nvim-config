@@ -7,7 +7,7 @@ vim.fn.sign_define("LspDiagnosticsSignInformation",
 vim.fn.sign_define("LspDiagnosticsSignHint",
                    {text = " ⯁", numhl = "LspDiagnosticsDefaultHint"})
 
-require('lspkind').init({
+require('lspkind').setup({
     with_text = false,
     symbol_map = {
         Text = '  ',

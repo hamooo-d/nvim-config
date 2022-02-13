@@ -1,5 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
+" Fast startup
+Plug 'lewis6991/impatient.nvim'
+
 " Highlights
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'sheerun/vim-polyglot'
@@ -53,7 +56,7 @@ Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'nanotee/sqls.nvim'
 
 " Startscreen
-Plug 'mhinz/vim-startify'
+Plug 'startup-nvim/startup.nvim'
 
 " Syntax and langauge support
 Plug 'hrsh7th/vim-vsnip-integ'
