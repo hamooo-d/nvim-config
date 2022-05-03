@@ -8,8 +8,6 @@ require("nvim-tree").setup({
 	-- will not open on setup if the filetype is in this list
 	ignore_ft_on_setup = {},
 	-- closes neovim automatically when the tree is the last **WINDOW** in the view
-	auto_close = true,
-	-- opens the tree when changing/opening a new tab if the tree wasn't previously opened
 	open_on_tab = false,
 	-- hijack the cursor in the tree to put it at the start of the filename
 	hijack_cursor = true,
@@ -43,17 +41,16 @@ require("nvim-tree").setup({
 		width = 28,
 		-- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
 		side = "left",
-		-- if true the tree will resize itself after opening a file
-		auto_resize = false,
 		mappings = {
 			-- custom only false will merge the list with the default mappings
 			-- if true, it will only use your list to set the mappings
 			custom_only = false,
 			-- list of mappings to set on the tree manually
-			list = {},
+			list = {
+				{ key = "<C-e>", action = "" },
+			},
 		},
 	},
-	nvim_tree_gitignore = true,
 	git = {
 		enable = true,
 		ignore = false,
@@ -70,4 +67,36 @@ require("nvim-tree").setup({
 			".husky",
 		},
 	},
+	actions = {
+		use_system_clipboard = true,
+		change_dir = {
+			enable = true,
+			global = false,
+			restrict_above_cwd = false,
+		},
+		open_file = {
+			quit_on_open = true,
+			resize_window = true,
+			window_picker = {
+				enable = true,
+				chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+				exclude = {
+					filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame", "startify" },
+					buftype = { "nofile", "terminal", "help" },
+				},
+			},
+		},
+	},
+	renderer = {
+		indent_markers = {
+			enable = false,
+			icons = {
+				corner = "└ ",
+				edge = "│ ",
+				none = "  ",
+			},
+		},
+	},
 })
+
+vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")

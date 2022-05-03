@@ -1,5 +1,5 @@
+-- Plugins
 require("plugins/treesitter")
-require("plugins/startup")
 require("plugins/lualine")
 require("plugins/bufferline")
 require("plugins/telescope")
@@ -11,6 +11,7 @@ require("plugins/onedark")
 require("colorizer").setup()
 require("hop").setup()
 
+-- LSP STUFF
 require("lsp/cmp")
 require("plugins/pairs")
 require("lsp/docker")
@@ -27,3 +28,4 @@ require("lsp/tailwindcss")
 require("lsp/lua")
 require("lsp/eslint")
 require("lsp/sql")
+require("lsp/python")

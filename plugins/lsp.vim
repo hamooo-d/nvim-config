@@ -29,12 +29,7 @@ map(0, "n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(
 map(0, "n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>")
 
 " Auto-format
-autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.graphql,*.json,*.md,*.mdx,*.svelte,*.yml,*yaml,*.lua,*.go lua vim.lsp.buf.formatting_seq_sync()
+autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.graphql,*.json,*.md,*.mdx,*.svelte,*.yml,*.yaml,*.lua,*.go,*.py lua vim.lsp.buf.formatting_seq_sync()
 autocmd BufWritePre *.tsx :TSLspOrganizeSync
 autocmd BufWritePre *.go lua GoImports(1000)
-" ALE
-let g:ale_linters = {
-  \   'javascript': ['eslint'],
-  \   'typescript': ['eslint'],
-  \   'typescriptreact': ['eslint'],
-  \}
+

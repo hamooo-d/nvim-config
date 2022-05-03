@@ -56,7 +56,7 @@ Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'nanotee/sqls.nvim'
 
 " Startscreen
-Plug 'startup-nvim/startup.nvim'
+Plug 'mhinz/vim-startify'
 
 " Syntax and langauge support
 Plug 'hrsh7th/vim-vsnip-integ'
