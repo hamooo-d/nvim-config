@@ -29,6 +29,7 @@ map(0, "n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(
 map(0, "n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>")
 
 " Auto-format
+<<<<<<< HEAD
 autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.graphql,*.json,*.md,*.mdx,*.svelte,*.yml,*yaml,*.lua lua vim.lsp.buf.formatting_seq_sync()
 " autocmd BufWritePre *.tsx :TSLspOrganizeSync
 " autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()
@@ -44,3 +45,9 @@ let g:ale_linters = {
 imap <silent><script><expr> <C-x> copilot#Accept("\<CR>")
 
 let g:copilot_no_tab_map = v:true
+=======
+autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.graphql,*.json,*.md,*.mdx,*.svelte,*.yml,*.yaml,*.lua,*.go,*.py lua vim.lsp.buf.formatting_seq_sync()
+autocmd BufWritePre *.tsx :TSLspOrganizeSync
+autocmd BufWritePre *.go lua GoImports(1000)
+
+>>>>>>> a3b3df1511c340501021210591e15fb0c7c087ef

@@ -58,7 +58,7 @@ Plug 'nanotee/sqls.nvim'
 Plug 'github/copilot.vim'
 
 " Startscreen
-Plug 'startup-nvim/startup.nvim'
+Plug 'mhinz/vim-startify'
 
 " Syntax and langauge support
 Plug 'hrsh7th/vim-vsnip-integ'

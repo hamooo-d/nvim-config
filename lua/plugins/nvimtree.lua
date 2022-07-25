@@ -41,15 +41,22 @@ require("nvim-tree").setup({
 		width = 28,
 		-- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
 		side = "left",
+<<<<<<< HEAD
 		-- if true the tree will resize itself after opening a file
+=======
+>>>>>>> a3b3df1511c340501021210591e15fb0c7c087ef
 		mappings = {
 			-- custom only false will merge the list with the default mappings
 			-- if true, it will only use your list to set the mappings
 			custom_only = false,
 			-- list of mappings to set on the tree manually
 			list = {
+<<<<<<< HEAD
 				key = "<C-e>",
 				action = "",
+=======
+				{ key = "<C-e>", action = "" },
+>>>>>>> a3b3df1511c340501021210591e15fb0c7c087ef
 			},
 		},
 	},
@@ -70,6 +77,7 @@ require("nvim-tree").setup({
 		},
 	},
 	actions = {
+<<<<<<< HEAD
 		open_file = {
 			quit_on_open = true,
 		},
@@ -88,4 +96,37 @@ vim.api.nvim_create_autocmd("BufEnter", {
 			vim.cmd("quit")
 		end
 	end,
+=======
+		use_system_clipboard = true,
+		change_dir = {
+			enable = true,
+			global = false,
+			restrict_above_cwd = false,
+		},
+		open_file = {
+			quit_on_open = true,
+			resize_window = true,
+			window_picker = {
+				enable = true,
+				chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+				exclude = {
+					filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame", "startify" },
+					buftype = { "nofile", "terminal", "help" },
+				},
+			},
+		},
+	},
+	renderer = {
+		indent_markers = {
+			enable = false,
+			icons = {
+				corner = "└ ",
+				edge = "│ ",
+				none = "  ",
+			},
+		},
+	},
+>>>>>>> a3b3df1511c340501021210591e15fb0c7c087ef
 })
+
+vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")

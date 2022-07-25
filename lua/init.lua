@@ -1,5 +1,5 @@
+-- Plugins
 require("plugins/treesitter")
-require("plugins/startup")
 require("plugins/lualine")
 require("plugins/bufferline")
 require("plugins/telescope")
@@ -14,6 +14,7 @@ require("go").setup()
 
 vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
 
+-- LSP STUFF
 require("lsp/cmp")
 require("plugins/pairs")
 require("lsp/docker")
@@ -45,3 +46,4 @@ vim.api.nvim_create_autocmd("BufEnter", {
 		end
 	end,
 })
+require("lsp/python")

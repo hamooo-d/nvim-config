@@ -13,8 +13,9 @@ null_ls.setup({
 			env = {
 				PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.config/nvim/util/.prettierrc.json"),
 			},
-            extra_filetypes = {"jsonc"}
+			extra_filetypes = { "jsonc" },
 		}),
 		formatting.stylua,
+		formatting.black,
 	},
 })
