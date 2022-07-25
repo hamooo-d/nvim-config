@@ -1,6 +1,6 @@
 require("nvim-tree").setup({
 	-- disables netrw completely
-	disable_netrw = true,
+	disable_netrw = false,
 	-- hijack netrw window on startup
 	hijack_netrw = true,
 	-- open the tree when running this setup function
@@ -8,8 +8,6 @@ require("nvim-tree").setup({
 	-- will not open on setup if the filetype is in this list
 	ignore_ft_on_setup = {},
 	-- closes neovim automatically when the tree is the last **WINDOW** in the view
-	auto_close = true,
-	-- opens the tree when changing/opening a new tab if the tree wasn't previously opened
 	open_on_tab = false,
 	-- hijack the cursor in the tree to put it at the start of the filename
 	hijack_cursor = true,
@@ -36,24 +34,25 @@ require("nvim-tree").setup({
 	},
 	diagnostics = {
 		enable = false,
-		icons = { hint = "", info = "", warning = "", error = "" },
 	},
 	view = {
+		-- adaptive_size = true,
 		-- width of the window, can be either a number (columns) or a string in `%`
 		width = 28,
 		-- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
 		side = "left",
 		-- if true the tree will resize itself after opening a file
-		auto_resize = false,
 		mappings = {
 			-- custom only false will merge the list with the default mappings
 			-- if true, it will only use your list to set the mappings
 			custom_only = false,
 			-- list of mappings to set on the tree manually
-			list = {},
+			list = {
+				key = "<C-e>",
+				action = "",
+			},
 		},
 	},
-	nvim_tree_gitignore = true,
 	git = {
 		enable = true,
 		ignore = false,
@@ -70,4 +69,23 @@ require("nvim-tree").setup({
 			".husky",
 		},
 	},
+	actions = {
+		open_file = {
+			quit_on_open = true,
+		},
+	},
+})
+
+vim.api.nvim_create_autocmd("BufEnter", {
+	command = "if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif",
+	nested = true,
+})
+
+vim.api.nvim_create_autocmd("BufEnter", {
+	nested = true,
+	callback = function()
+		if #vim.api.nvim_list_wins() == 1 and vim.api.nvim_buf_get_name(0):match("NvimTree_") ~= nil then
+			vim.cmd("quit")
+		end
+	end,
 })

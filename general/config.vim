@@ -40,4 +40,7 @@ set timeoutlen=500
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" imap <silent><script><expr> <leader>cb copilot#Accept("\<CR>")
+" let g:copilot_no_tab_map = v:true
+
 cmap w!! w !sudo tee %

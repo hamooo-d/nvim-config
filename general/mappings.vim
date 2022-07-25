@@ -81,7 +81,7 @@ inoremap <expr> <c-k> ("\<C-p>")
 nnoremap <silent> <Leader>z :source %<CR>
 
 " LuaTree
-nnoremap <silent> <C-e> :NvimTreeToggle<CR>
+nnoremap <silent> <C-e> :NvimTreeOpen<CR>
 
 " Commentet
 vnoremap <silent> <Leader>/ :Commentary<CR>

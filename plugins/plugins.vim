@@ -16,6 +16,8 @@ Plug 'nvim-telescope/telescope-media-files.nvim'
 
 " Explorer
 Plug 'kyazdani42/nvim-tree.lua'
+" Plug 'preservim/nerdtree' 
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Colorscheme
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
@@ -41,10 +43,9 @@ Plug 'tpope/vim-rhubarb'
 " Lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-emoji'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'tami5/lspsaga.nvim'
 Plug 'onsails/lspkind-nvim'
@@ -54,6 +55,7 @@ Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 Plug 'nvim-lua/lsp-status.nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'nanotee/sqls.nvim'
+Plug 'github/copilot.vim'
 
 " Startscreen
 Plug 'startup-nvim/startup.nvim'
@@ -61,7 +63,9 @@ Plug 'startup-nvim/startup.nvim'
 " Syntax and langauge support
 Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/cmp-vsnip'
 Plug 'mboughaba/i3config.vim'
+Plug 'ray-x/go.nvim'
 
 
 " Utilies
