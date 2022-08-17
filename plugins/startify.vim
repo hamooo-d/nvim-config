@@ -22,7 +22,7 @@ let g:startify_bookmarks = [
             \ { 'v': '~/.config/nvim/init.vim' },
             \ { 'T': '~/.tmux.conf.local' },
             \ { 'z': '~/.zshrc' },
-            \ { 'd': '~/dev/cas/' },
+            \ { 'd': '~/dev/abjad' },
             \ ]
 
 let g:startify_enable_special = 1

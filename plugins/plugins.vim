@@ -11,7 +11,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 " Telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 Plug 'nvim-telescope/telescope-media-files.nvim'
 
 " Explorer
@@ -69,7 +69,7 @@ Plug 'ray-x/go.nvim'
 
 
 " Utilies
-Plug 'tpope/vim-commentary'
+Plug 'numToStr/Comment.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'akinsho/toggleterm.nvim'
