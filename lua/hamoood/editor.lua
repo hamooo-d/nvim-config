@@ -23,7 +23,6 @@ opt.incsearch = true
 opt.termguicolors = true
 
 opt.scrolloff = 8
-opt.signcolumn = "yes"
 
 opt.isfname:append("@-@")
 
@@ -32,8 +31,6 @@ opt.cmdheight = 1
 opt.updatetime = 50
 
 opt.shortmess:append("c")
-
-opt.colorcolumn = "80"
 
 opt.clipboard = "unnamedplus"
 
