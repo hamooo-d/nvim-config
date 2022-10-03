@@ -1,4 +1,5 @@
 local opt = vim.opt
+local cmd = vim.cmd
 local g = vim.g
 
 opt.number = true
@@ -11,6 +12,8 @@ opt.expandtab = true
 
 opt.smartindent = true
 opt.wrap = false
+
+opt.signcolumn = "yes"
 
 opt.swapfile = false
 opt.backup = false
@@ -35,3 +38,7 @@ opt.shortmess:append("c")
 opt.clipboard = "unnamedplus"
 
 g.mapleader = " "
+
+opt.formatoptions = "jql"
+
+cmd([[colorscheme tokyonight-night]])
