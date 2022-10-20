@@ -1,12 +1,22 @@
-local vim_capabilities = vim.lsp.protocol.make_client_capabilities()
+require("hamoood.utils")
 
+local vim_capabilities = vim.lsp.protocol.make_client_capabilities()
 vim_capabilities.textDocument.completion.completionItem.snippetSupport = true
 
--- Use an on_attach function to only map the following keys
+local lsp_formatting = function(bufnr)
+	return function()
+		vim.lsp.buf.format({
+			filter = function(client)
+				-- apply whatever logic you want (in this example, we'll only use null-ls)
+				return client.name == "null-ls"
+			end,
+			bufnr = bufnr,
+		})
+	end
+end
 -- after the language server attaches to the current buffer
-local on_attach = function(client)
-	client.resolved_capabilities.document_formatting = false
-	client.resolved_capabilities.document_range_formatting = false
+local on_attach = function(_, bufnr)
+	map("n", "<leader>cf", lsp_formatting(bufnr))
 end
 
 local lsp_flags = {
@@ -41,7 +51,9 @@ require("lspconfig")["sumneko_lua"].setup({
 		},
 	},
 })
+
 require("lspconfig").tsserver.setup({})
+require("lspconfig").pyright.setup({})
 
 -- Lsp Utlities
 require("hamoood.lsp.saga")

@@ -4,9 +4,6 @@ local opts = { noremap = true, silent = true }
 
 saga.init_lsp_saga()
 
--- code format
-map({ "n", "v" }, "<leader>cf", vim.lsp.buf.formatting, opts)
-
 -- use <C-t> to jump back
 map("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", opts)
 -- Code action
